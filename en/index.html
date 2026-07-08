@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Guilherme Molon | Desenvolvedor de Software</title>
-  <meta name="description" content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, com projetos próprios nas áreas de tecnologia, turismo regional e gestão de imóveis.">
+  <title>Guilherme Molon | Software Developer</title>
+  <meta name="description" content="Guilherme Molon is a software developer from Brazil, building web systems and digital products in technology, regional tourism and property management.">
 
   <meta name="robots" content="index, follow">
 
@@ -63,6 +63,34 @@
       -webkit-backdrop-filter: blur(14px);
       box-shadow: 0 30px 80px rgba(0,0,0,.28);
       animation: cardEntrada 0.8s ease-out;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: .2rem;
+    }
+
+    .lang-switch a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .35rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.045);
+      color: #cbd5e1;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-decoration: none;
+      transition: all .22s ease;
+    }
+
+    .lang-switch a:hover {
+      color: #fff;
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.24);
     }
 
     .topo {
@@ -174,65 +202,6 @@
       margin-bottom: .12rem;
     }
 
-    .perfis {
-      display: flex;
-      justify-content: center;
-      gap: .7rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .perfil-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .4rem;
-      padding: .55rem .85rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.045);
-      color: #cbd5e1;
-      font-size: .78rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all .22s ease;
-    }
-
-    .perfil-link:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.22);
-      color: #fff;
-    }
-
-    .lang-switch {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: .2rem;
-    }
-
-    .lang-switch a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: .35rem .55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.045);
-      color: #cbd5e1;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-decoration: none;
-      transition: all .22s ease;
-    }
-
-    .lang-switch a:hover {
-      color: #fff;
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.24);
-    }
-
     @media (max-width: 480px) {
       .page-clean {
         padding: 32px 14px;
@@ -258,40 +227,40 @@
   <div class="content-box">
     <section class="card">
 
-    <div class="lang-switch">
-      <a href="/en/">EN</a>
-    </div>
+      <div class="lang-switch">
+        <a href="/">PT</a>
+      </div>
 
       <div class="topo">
-        <div class="tag">Software • Produtos digitais</div>
+        <div class="tag">Software • Digital Products</div>
         <div class="nome">Guilherme Felipe Molon</div>
-        <div class="profissao">Desenvolvedor de Software</div>
+        <div class="profissao">Software Developer</div>
       </div>
 
       <div class="links">
         <a href="https://www.meualuguel.app.br" class="link-btn">
           <span>Meu Aluguel</span>
-          <small>Sistema para proprietários de imóveis</small>
+          <small>Rental property management system</small>
         </a>
 
         <a href="https://www.raizesdaserra-rs.com.br" class="link-btn">
           <span>Raízes da Serra</span>
-          <small>Portal de turismo e cultura da Serra Gaúcha</small>
+          <small>Tourism and culture portal for Serra Gaúcha, Brazil</small>
         </a>
 
         <a href="https://www.instagram.com/nona_amelia_/" class="link-btn">
           <span>Nona Amélia</span>
-          <small>Conteúdo em vídeo sobre a Serra Gaúcha</small>
+          <small>Video content about Serra Gaúcha, Brazil</small>
         </a>
 
         <a href="https://www.sinuelo.com.br" class="link-btn">
           <span>Vinícola Sinuelo</span>
-          <small>Landing page institucional</small>
+          <small>Institutional landing page</small>
         </a>
       </div>
 
       <div class="contato">
-        <p>Contato</p>
+        <p>Contact</p>
         <a href="mailto:contato@guilhermemolon.com.br" class="link-btn">
           <span>E-mail</span>
           <small>contato@guilhermemolon.com.br</small>
@@ -299,8 +268,8 @@
       </div>
 
       <div class="formacao">
-        <span>Análise e Desenvolvimento de Sistemas — em andamento</span>
-        <span>Administração — UCS</span>
+        <span>Systems Analysis and Development — in progress</span>
+        <span>Business Administration — UCS</span>
         <span>Marketing — FGV</span>
       </div>
 
@@ -309,7 +278,7 @@
 </main>
 
 <script>
-  // Proteções de clique direito e atalhos de desenvolvedor
+  // Basic protections against right click and developer shortcuts
   document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
   });
