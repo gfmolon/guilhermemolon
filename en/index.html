@@ -55,6 +55,7 @@
     }
 
     .card {
+      position: relative;
       border: 1px solid rgba(255,255,255,.12);
       border-radius: 28px;
       padding: 2rem 1.3rem;
@@ -66,9 +67,10 @@
     }
 
     .lang-switch {
+      position: absolute;
+      top: 1.15rem;
+      right: 1.15rem;
       display: flex;
-      justify-content: flex-end;
-      margin-bottom: .2rem;
     }
 
     .lang-switch a {
@@ -278,7 +280,7 @@
 </main>
 
 <script>
-  // Basic protections against right click and developer shortcuts
+  // Basic protection against right click and developer shortcuts
   document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
   });
