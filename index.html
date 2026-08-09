@@ -1,160 +1,850 @@
-<meta
-  name="description"
-  content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, com projetos próprios nas áreas de tecnologia, turismo regional, mercado imobiliário e conteúdo digital."
->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<section class="card">
+  <title>Guilherme Molon | Desenvolvedor de Software</title>
 
-  <div class="lang-switch">
-    <a href="/en/" aria-label="Versão em inglês">EN</a>
-  </div>
+  <meta
+    name="description"
+    content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, com projetos próprios nas áreas de tecnologia, turismo regional, mercado imobiliário e conteúdo digital."
+  >
 
-  <div class="topo">
+  <meta name="robots" content="index, follow">
 
-    <div class="tag">
-      Software • Produtos digitais
+  <link
+    rel="icon"
+    href="https://res.cloudinary.com/dgsadszgq/image/upload/v1781267156/favicon_g41du6.ico"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://res.cloudinary.com/dgsadszgq/image/upload/v1781267157/favicon-16x16_mf3id2.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="https://res.cloudinary.com/dgsadszgq/image/upload/v1781267157/favicon-32x32_lx7thz.png"
+  >
+
+  <meta name="theme-color" content="#0f172a">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    @keyframes cardEntrada {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    html {
+      min-height: 100%;
+      background: #0f172a;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", sans-serif;
+      color: #f5f5f5;
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(88, 166, 255, 0.22),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(139, 92, 246, 0.22),
+          transparent 36%
+        ),
+        linear-gradient(
+          135deg,
+          #09090b 0%,
+          #111827 48%,
+          #0f172a 100%
+        );
+    }
+
+    .page-clean {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 42px 16px;
+    }
+
+    .content-box {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .card {
+      position: relative;
+
+      padding: 2rem 1.3rem;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.12
+        );
+
+      border-radius: 28px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.06
+        );
+
+      backdrop-filter:
+        blur(14px);
+
+      -webkit-backdrop-filter:
+        blur(14px);
+
+      box-shadow:
+        0 30px 80px
+        rgba(
+          0,
+          0,
+          0,
+          0.28
+        );
+
+      animation:
+        cardEntrada
+        0.8s
+        ease-out;
+    }
+
+    /* TOPO */
+
+    .topo {
+      padding:
+        0.8rem 0 1.1rem;
+
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+
+      margin-bottom: 1rem;
+
+      padding:
+        0.45rem 0.75rem;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.16
+        );
+
+      border-radius: 999px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.05
+        );
+
+      color: #cbd5e1;
+
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .nome {
+      margin-bottom:
+        0.45rem;
+
+      color: #fff;
+
+      font-size:
+        1.35rem;
+
+      font-weight: 800;
+
+      letter-spacing:
+        -0.03em;
+    }
+
+    .profissao {
+      max-width: 280px;
+
+      margin: 0 auto;
+
+      color: #94a3b8;
+
+      font-size:
+        0.98rem;
+
+      font-weight: 500;
+
+      line-height: 1.4;
+    }
+
+    /* LINKS */
+
+    .links {
+      display: flex;
+
+      flex-direction:
+        column;
+
+      gap: 0.85rem;
+
+      margin-top:
+        0.9rem;
+    }
+
+    .link-btn {
+      display: flex;
+
+      flex-direction:
+        column;
+
+      align-items:
+        center;
+
+      width: 100%;
+
+      padding:
+        1.2rem 1rem;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.14
+        );
+
+      border-radius:
+        18px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.08
+        );
+
+      color: #f8fafc;
+
+      text-align:
+        center;
+
+      text-decoration:
+        none;
+
+      transition:
+        all
+        0.25s
+        cubic-bezier(
+          0.4,
+          0,
+          0.2,
+          1
+        );
+    }
+
+    .link-btn:hover {
+      transform:
+        translateY(-3px)
+        scale(1.01);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.13
+        );
+
+      border-color:
+        rgba(
+          255,
+          255,
+          255,
+          0.3
+        );
+
+      box-shadow:
+        0 10px 25px
+        rgba(
+          0,
+          0,
+          0,
+          0.2
+        );
+    }
+
+    .link-btn span {
+      margin-bottom: 2px;
+
+      font-size: 1rem;
+
+      font-weight: 800;
+    }
+
+    .link-btn small {
+      color: #94a3b8;
+
+      font-size: 0.78rem;
+
+      font-weight: 500;
+
+      line-height: 1.25;
+    }
+
+    /* SEÇÕES SECUNDÁRIAS */
+
+    .secao {
+      margin-top: 1.8rem;
+      text-align: center;
+    }
+
+    .secao-titulo {
+      margin:
+        0 0 0.8rem;
+
+      color: #94a3b8;
+
+      font-size:
+        0.85rem;
+
+      font-weight: 600;
+
+      letter-spacing:
+        0.05em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .secao .links {
+      margin-top: 0;
+    }
+
+    /* FORMAÇÃO */
+
+    .formacao {
+      margin-top: 1.8rem;
+
+      padding-top: 1.2rem;
+
+      border-top:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.08
+        );
+
+      color: #7c8ba1;
+
+      font-size: 0.78rem;
+
+      font-weight: 500;
+
+      letter-spacing:
+        0.02em;
+
+      line-height: 1.6;
+
+      text-align: center;
+    }
+
+    .formacao span {
+      display: block;
+
+      margin-bottom:
+        0.12rem;
+    }
+
+    .formacao small {
+      display: block;
+
+      color: #94a3b8;
+
+      font-size: 0.9em;
+    }
+
+    /* IDIOMA */
+
+    .lang-switch {
+      position: absolute;
+
+      top: 0.85rem;
+      right: 0.95rem;
+
+      display: flex;
+    }
+
+    .lang-switch a {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        0.28rem 0.48rem;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.12
+        );
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.035
+        );
+
+      color: #cbd5e1;
+
+      font-size:
+        0.66rem;
+
+      font-weight: 700;
+
+      letter-spacing:
+        0.05em;
+
+      text-decoration:
+        none;
+
+      transition:
+        all 0.22s ease;
+    }
+
+    .lang-switch a:hover {
+      color: #fff;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.09
+        );
+
+      border-color:
+        rgba(
+          255,
+          255,
+          255,
+          0.24
+        );
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 480px) {
+
+      .page-clean {
+        min-height: 100dvh;
+
+        padding:
+          18px 10px;
+      }
+
+      .content-box {
+        max-width: 100%;
+      }
+
+      .card {
+        padding:
+          1.35rem
+          0.8rem
+          1.2rem;
+
+        border-radius:
+          20px;
+      }
+
+      .topo {
+        padding:
+          1.15rem
+          0
+          0.8rem;
+      }
+
+      .tag {
+        margin-bottom:
+          0.75rem;
+
+        padding:
+          0.38rem
+          0.65rem;
+
+        font-size:
+          0.68rem;
+      }
+
+      .nome {
+        font-size:
+          1.2rem;
+      }
+
+      .profissao {
+        font-size:
+          0.88rem;
+      }
+
+      .links {
+        gap: 0.65rem;
+
+        margin-top:
+          0.65rem;
+      }
+
+      .link-btn {
+        padding:
+          0.9rem
+          0.7rem;
+
+        border-radius:
+          15px;
+      }
+
+      .link-btn span {
+        font-size:
+          0.94rem;
+      }
+
+      .link-btn small {
+        max-width:
+          280px;
+
+        font-size:
+          0.72rem;
+
+        line-height:
+          1.35;
+      }
+
+      .secao {
+        margin-top:
+          1.35rem;
+      }
+
+      .secao-titulo {
+        margin-bottom:
+          0.65rem;
+
+        font-size:
+          0.75rem;
+      }
+
+      .secao .links {
+        margin-top: 0;
+      }
+
+      .formacao {
+        margin-top:
+          1.25rem;
+
+        padding:
+          1rem
+          0.25rem
+          0;
+
+        font-size:
+          0.68rem;
+
+        line-height:
+          1.55;
+
+        letter-spacing:
+          0;
+      }
+
+      .formacao span {
+        margin-bottom:
+          0.22rem;
+      }
+
+      .lang-switch {
+        top: 0.65rem;
+
+        right: 0.7rem;
+      }
+
+      .lang-switch a {
+        padding:
+          0.25rem
+          0.42rem;
+
+        font-size:
+          0.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page-clean">
+
+    <div class="content-box">
+
+      <section class="card">
+
+        <!-- LANGUAGE -->
+
+        <div class="lang-switch">
+          <a
+            href="/en/"
+            aria-label="Versão em inglês"
+          >
+            EN
+          </a>
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div class="topo">
+
+          <div class="tag">
+            Software • Produtos digitais
+          </div>
+
+          <div class="nome">
+            Guilherme Felipe Molon
+          </div>
+
+          <div class="profissao">
+            Desenvolvedor de Software
+          </div>
+
+        </div>
+
+
+        <!-- MAIN PROJECTS -->
+
+        <div class="links">
+
+          <a
+            href="https://www.raizesdaserra.com.br"
+            class="link-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              Raízes da Serra
+            </span>
+
+            <small>
+              Portal de turismo e cultura da Serra Gaúcha
+            </small>
+          </a>
+
+
+          <a
+            href="https://m2radar.com.br"
+            class="link-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              RadarM2
+            </span>
+
+            <small>
+              Plataforma de dados do mercado imobiliário
+            </small>
+          </a>
+
+
+          <a
+            href="https://www.meualuguel.app.br"
+            class="link-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              Meu Aluguel
+            </span>
+
+            <small>
+              Sistema para proprietários de imóveis
+            </small>
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/nona_amelia_/"
+            class="link-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              Nona Amélia
+            </span>
+
+            <small>
+              Conteúdo regional e comunidade digital
+            </small>
+          </a>
+
+        </div>
+
+
+        <!-- OTHER WORK -->
+
+        <div class="secao">
+
+          <p class="secao-titulo">
+            Outros trabalhos
+          </p>
+
+          <div class="links">
+
+            <a
+              href="https://www.sinuelo.com.br"
+              class="link-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                Vinícola Sinuelo
+              </span>
+
+              <small>
+                Site institucional
+              </small>
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/empsaomarcos/"
+              class="link-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                Empório São Marcos
+              </span>
+
+              <small>
+                Vinhos, presentes e produtos coloniais
+              </small>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="secao">
+
+          <p class="secao-titulo">
+            Contato
+          </p>
+
+          <a
+            href="mailto:contact@guilhermemolon.com"
+            class="link-btn"
+          >
+            <span>
+              E-mail
+            </span>
+
+            <small>
+              contact@guilhermemolon.com
+            </small>
+          </a>
+
+        </div>
+
+
+        <!-- EDUCATION -->
+
+        <div class="formacao">
+
+          <span>
+            Análise e Desenvolvimento de Sistemas — UCS
+
+            <small>
+              Em andamento · continuidade prevista em Engenharia de Software
+            </small>
+          </span>
+
+          <span>
+            Bacharelado em Administração — UCS
+          </span>
+
+          <span>
+            MBA in Marketing — FGV
+          </span>
+
+        </div>
+
+      </section>
+
     </div>
 
-    <div class="nome">
-      Guilherme Felipe Molon
-    </div>
-
-    <div class="profissao">
-      Desenvolvedor de Software
-    </div>
-
-  </div>
+  </main>
 
 
-  <!-- PROJETOS PRINCIPAIS -->
+  <script
+    data-goatcounter="https://gfmolon.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
 
-  <div class="links">
-
-    <a
-      href="https://www.raizesdaserra.com.br"
-      class="link-btn"
-    >
-      <span>Raízes da Serra</span>
-      <small>
-        Portal de turismo e cultura da Serra Gaúcha
-      </small>
-    </a>
-
-    <a
-      href="https://m2radar.com.br"
-      class="link-btn"
-    >
-      <span>RadarM2</span>
-      <small>
-        Plataforma de dados do mercado imobiliário
-      </small>
-    </a>
-
-    <a
-      href="https://www.meualuguel.app.br"
-      class="link-btn"
-    >
-      <span>Meu Aluguel</span>
-      <small>
-        Sistema para proprietários de imóveis
-      </small>
-    </a>
-
-    <a
-      href="https://www.instagram.com/nona_amelia_/"
-      class="link-btn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>Nona Amélia</span>
-      <small>
-        Conteúdo regional e comunidade digital
-      </small>
-    </a>
-
-  </div>
-
-
-  <!-- OUTROS TRABALHOS -->
-
-  <div class="contato">
-
-    <p>
-      Outros trabalhos
-    </p>
-
-    <div class="links">
-
-      <a
-        href="https://www.sinuelo.com.br"
-        class="link-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>Vinícola Sinuelo</span>
-        <small>
-          Site institucional
-        </small>
-      </a>
-
-      <a
-        href="https://www.instagram.com/empsaomarcos/"
-        class="link-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>Empório São Marcos</span>
-        <small>
-          Vinhos, presentes e produtos coloniais
-        </small>
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- CONTATO -->
-
-  <div class="contato">
-
-    <p>
-      Contato
-    </p>
-
-    <a
-      href="mailto:contact@guilhermemolon.com"
-      class="link-btn"
-    >
-      <span>E-mail</span>
-      <small>
-        contact@guilhermemolon.com
-      </small>
-    </a>
-
-  </div>
-
-
-  <!-- FORMAÇÃO -->
-
-  <div class="formacao">
-
-    <span>
-      Análise e Desenvolvimento de Sistemas — UCS
-
-      <small>
-        Em andamento · continuidade prevista em Engenharia de Software
-      </small>
-    </span>
-
-    <span>
-      Bacharelado em Administração — UCS
-    </span>
-
-    <span>
-      MBA em Marketing — FGV
-    </span>
-
-  </div>
-
-</section>
+</body>
+</html>
