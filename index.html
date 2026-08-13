@@ -1,17 +1,33 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Guilherme Molon | Desenvolvedor de Software</title>
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Guilherme Molon | Desenvolvedor de Software
+  </title>
 
   <meta
     name="description"
     content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, com projetos próprios nas áreas de tecnologia, turismo regional, mercado imobiliário e conteúdo digital."
   >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0f172a"
+  >
 
   <link
     rel="icon"
@@ -32,94 +48,206 @@
     href="https://res.cloudinary.com/dgsadszgq/image/upload/v1781267157/favicon-32x32_lx7thz.png"
   >
 
-  <meta name="theme-color" content="#0f172a">
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
 
-    @keyframes cardEntrada {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+    :root {
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+      --bg:
+        #0b1120;
 
-    html {
-      min-height: 100%;
-      background: #0f172a;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Inter", sans-serif;
-      color: #f5f5f5;
-
-      background:
-        radial-gradient(
-          circle at top left,
-          rgba(88, 166, 255, 0.22),
-          transparent 34%
-        ),
-        radial-gradient(
-          circle at bottom right,
-          rgba(139, 92, 246, 0.22),
-          transparent 36%
-        ),
-        linear-gradient(
-          135deg,
-          #09090b 0%,
-          #111827 48%,
-          #0f172a 100%
-        );
-    }
-
-    .page-clean {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 42px 16px;
-    }
-
-    .content-box {
-      width: 100%;
-      max-width: 560px;
-    }
-
-    .card {
-      position: relative;
-
-      padding: 2rem 1.3rem;
-
-      border:
-        1px solid rgba(
-          255,
-          255,
-          255,
-          0.12
-        );
-
-      border-radius: 28px;
-
-      background:
+      --card:
         rgba(
           255,
           255,
           255,
-          0.06
+          .045
         );
+
+      --border:
+        rgba(
+          255,
+          255,
+          255,
+          .09
+        );
+
+      --border-strong:
+        rgba(
+          255,
+          255,
+          255,
+          .14
+        );
+
+      --text:
+        #f8fafc;
+
+      --text-soft:
+        #dbe3ee;
+
+      --muted:
+        #94a3b8;
+
+      --muted-dark:
+        #64748b;
+
+      --blue:
+        #8cbcff;
+
+    }
+
+
+    * {
+      box-sizing:
+        border-box;
+    }
+
+
+    html {
+      min-height:
+        100%;
+
+      background:
+        var(--bg);
+    }
+
+
+    body {
+
+      margin:
+        0;
+
+      min-height:
+        100vh;
+
+      font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color:
+        var(--text);
+
+      background:
+
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(
+            59,
+            130,
+            246,
+            .12
+          ),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 90% 100%,
+          rgba(
+            124,
+            58,
+            237,
+            .08
+          ),
+          transparent 30%
+        ),
+
+        var(--bg);
+
+    }
+
+
+    a {
+      color:
+        inherit;
+    }
+
+
+    /* ========================================
+       ENTRADA
+    ======================================== */
+
+    @keyframes entrada {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(12px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* ========================================
+       PÁGINA
+    ======================================== */
+
+    .page {
+
+      min-height:
+        100vh;
+
+      display:
+        flex;
+
+      justify-content:
+        center;
+
+      padding:
+        42px 18px;
+
+    }
+
+
+    .container {
+
+      width:
+        100%;
+
+      max-width:
+        580px;
+
+    }
+
+
+    .perfil {
+
+      position:
+        relative;
+
+      padding:
+        32px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        26px;
+
+      background:
+        var(--card);
 
       backdrop-filter:
         blur(14px);
@@ -128,297 +256,41 @@
         blur(14px);
 
       box-shadow:
-        0 30px 80px
+        0 28px 80px
         rgba(
           0,
           0,
           0,
-          0.28
+          .22
         );
 
       animation:
-        cardEntrada
-        0.8s
-        ease-out;
+        entrada .6s
+        ease-out both;
+
     }
 
-    /* TOPO */
 
-    .topo {
-      padding:
-        0.8rem 0 1.1rem;
+    /* ========================================
+       IDIOMA
+    ======================================== */
 
-      text-align: center;
+    .lang {
+
+      position:
+        absolute;
+
+      top:
+        22px;
+
+      right:
+        24px;
+
     }
 
-    .tag {
-      display: inline-block;
 
-      margin-bottom: 1rem;
+    .lang a {
 
-      padding:
-        0.45rem 0.75rem;
-
-      border:
-        1px solid rgba(
-          255,
-          255,
-          255,
-          0.16
-        );
-
-      border-radius: 999px;
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.05
-        );
-
-      color: #cbd5e1;
-
-      font-size: 0.78rem;
-      font-weight: 600;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
-    }
-
-    .nome {
-      margin-bottom:
-        0.45rem;
-
-      color: #fff;
-
-      font-size:
-        1.35rem;
-
-      font-weight: 800;
-
-      letter-spacing:
-        -0.03em;
-    }
-
-    .profissao {
-      max-width: 280px;
-
-      margin: 0 auto;
-
-      color: #94a3b8;
-
-      font-size:
-        0.98rem;
-
-      font-weight: 500;
-
-      line-height: 1.4;
-    }
-
-    /* LINKS */
-
-    .links {
-      display: flex;
-
-      flex-direction:
-        column;
-
-      gap: 0.85rem;
-
-      margin-top:
-        0.9rem;
-    }
-
-    .link-btn {
-      display: flex;
-
-      flex-direction:
-        column;
-
-      align-items:
-        center;
-
-      width: 100%;
-
-      padding:
-        1.2rem 1rem;
-
-      border:
-        1px solid rgba(
-          255,
-          255,
-          255,
-          0.14
-        );
-
-      border-radius:
-        18px;
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.08
-        );
-
-      color: #f8fafc;
-
-      text-align:
-        center;
-
-      text-decoration:
-        none;
-
-      transition:
-        all
-        0.25s
-        cubic-bezier(
-          0.4,
-          0,
-          0.2,
-          1
-        );
-    }
-
-    .link-btn:hover {
-      transform:
-        translateY(-3px)
-        scale(1.01);
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.13
-        );
-
-      border-color:
-        rgba(
-          255,
-          255,
-          255,
-          0.3
-        );
-
-      box-shadow:
-        0 10px 25px
-        rgba(
-          0,
-          0,
-          0,
-          0.2
-        );
-    }
-
-    .link-btn span {
-      margin-bottom: 2px;
-
-      font-size: 1rem;
-
-      font-weight: 800;
-    }
-
-    .link-btn small {
-      color: #94a3b8;
-
-      font-size: 0.78rem;
-
-      font-weight: 500;
-
-      line-height: 1.25;
-    }
-
-    /* SEÇÕES SECUNDÁRIAS */
-
-    .secao {
-      margin-top: 1.8rem;
-      text-align: center;
-    }
-
-    .secao-titulo {
-      margin:
-        0 0 0.8rem;
-
-      color: #94a3b8;
-
-      font-size:
-        0.85rem;
-
-      font-weight: 600;
-
-      letter-spacing:
-        0.05em;
-
-      text-transform:
-        uppercase;
-    }
-
-    .secao .links {
-      margin-top: 0;
-    }
-
-    /* FORMAÇÃO */
-
-    .formacao {
-      margin-top: 1.8rem;
-
-      padding-top: 1.2rem;
-
-      border-top:
-        1px solid rgba(
-          255,
-          255,
-          255,
-          0.08
-        );
-
-      color: #7c8ba1;
-
-      font-size: 0.78rem;
-
-      font-weight: 500;
-
-      letter-spacing:
-        0.02em;
-
-      line-height: 1.6;
-
-      text-align: center;
-    }
-
-    .formacao span {
-      display: block;
-
-      margin-bottom:
-        0.12rem;
-    }
-
-    .formacao small {
-      display: block;
-
-      color: #94a3b8;
-
-      font-size: 0.9em;
-    }
-
-    /* IDIOMA */
-
-    .lang-switch {
-      position: absolute;
-
-      top: 0.85rem;
-      right: 0.95rem;
-
-      display: flex;
-    }
-
-    .lang-switch a {
       display:
         inline-flex;
 
@@ -428,16 +300,18 @@
       justify-content:
         center;
 
+      min-width:
+        34px;
+
+      height:
+        27px;
+
       padding:
-        0.28rem 0.48rem;
+        0 9px;
 
       border:
-        1px solid rgba(
-          255,
-          255,
-          255,
-          0.12
-        );
+        1px solid
+        var(--border);
 
       border-radius:
         999px;
@@ -447,391 +321,1421 @@
           255,
           255,
           255,
-          0.035
+          .025
         );
 
-      color: #cbd5e1;
+      color:
+        var(--muted);
 
       font-size:
-        0.66rem;
+        .62rem;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
       letter-spacing:
-        0.05em;
+        .06em;
 
       text-decoration:
         none;
 
       transition:
-        all 0.22s ease;
+        .2s ease;
+
     }
 
-    .lang-switch a:hover {
-      color: #fff;
+
+    .lang a:hover {
+
+      color:
+        var(--text);
+
+      border-color:
+        var(--border-strong);
 
       background:
         rgba(
           255,
           255,
           255,
-          0.09
+          .06
         );
 
-      border-color:
+    }
+
+
+    /* ========================================
+       CABEÇALHO
+    ======================================== */
+
+    .topo {
+
+      padding:
+        13px 0 33px;
+
+    }
+
+
+    .tag {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      min-height:
+        26px;
+
+      margin-bottom:
+        19px;
+
+      padding:
+        0 10px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        999px;
+
+      color:
+        var(--muted);
+
+      background:
         rgba(
           255,
           255,
           255,
-          0.24
+          .025
         );
+
+      font-size:
+        .67rem;
+
+      font-weight:
+        650;
+
+      letter-spacing:
+        .07em;
+
+      text-transform:
+        uppercase;
+
     }
 
-    /* MOBILE */
 
-    @media (max-width: 480px) {
+    .nome {
 
-      .page-clean {
-        min-height: 100dvh;
+      margin:
+        0 0 7px;
 
-        padding:
-          18px 10px;
+      padding-right:
+        60px;
+
+      color:
+        var(--text);
+
+      font-size:
+        1.55rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        -.04em;
+
+      line-height:
+        1.1;
+
+    }
+
+
+    .profissao {
+
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        .94rem;
+
+      font-weight:
+        500;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    /* ========================================
+       TÍTULO
+    ======================================== */
+
+    .titulo-secao {
+
+      margin:
+        0 0 10px;
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .66rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        .085em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    /* ========================================
+       PROJETOS
+    ======================================== */
+
+    .projetos {
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+    }
+
+
+    .projeto {
+
+      position:
+        relative;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        20px;
+
+      min-height:
+        72px;
+
+      padding:
+        14px 4px;
+
+      border-bottom:
+        1px solid
+        var(--border);
+
+      text-decoration:
+        none;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .projeto:first-child {
+
+      border-top:
+        1px solid
+        var(--border);
+
+    }
+
+
+    .projeto-conteudo {
+
+      min-width:
+        0;
+
+    }
+
+
+    .projeto strong {
+
+      display:
+        block;
+
+      margin-bottom:
+        5px;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        .93rem;
+
+      font-weight:
+        650;
+
+      letter-spacing:
+        -.015em;
+
+    }
+
+
+    .projeto small {
+
+      display:
+        block;
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .73rem;
+
+      font-weight:
+        450;
+
+      line-height:
+        1.45;
+
+    }
+
+
+    .projeto-seta {
+
+      flex:
+        0 0 auto;
+
+      color:
+        #64748b;
+
+      font-size:
+        .95rem;
+
+      transition:
+        transform .2s ease,
+        color .2s ease;
+
+    }
+
+
+    .projeto:hover {
+
+      padding-left:
+        8px;
+
+      padding-right:
+        8px;
+
+    }
+
+
+    .projeto:hover
+    .projeto-seta {
+
+      color:
+        var(--blue);
+
+      transform:
+        translate(
+          2px,
+          -2px
+        );
+
+    }
+
+
+    .projeto:hover strong {
+
+      color:
+        #fff;
+
+    }
+
+
+    /* ========================================
+       TOGGLES
+    ======================================== */
+
+    .grupos {
+
+      margin-top:
+        29px;
+
+    }
+
+
+    .grupo {
+
+      border-top:
+        1px solid
+        var(--border);
+
+    }
+
+
+    .grupo:last-child {
+
+      border-bottom:
+        1px solid
+        var(--border);
+
+    }
+
+
+    .grupo summary {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        20px;
+
+      min-height:
+        54px;
+
+      padding:
+        0 3px;
+
+      color:
+        #aeb9c8;
+
+      font-size:
+        .78rem;
+
+      font-weight:
+        600;
+
+      cursor:
+        pointer;
+
+      list-style:
+        none;
+
+      user-select:
+        none;
+
+    }
+
+
+    .grupo summary::-webkit-details-marker {
+      display:
+        none;
+    }
+
+
+    .grupo summary::marker {
+      display:
+        none;
+    }
+
+
+    .grupo-icone {
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        1rem;
+
+      font-weight:
+        400;
+
+      line-height:
+        1;
+
+      transition:
+        transform .2s ease,
+        color .2s ease;
+
+    }
+
+
+    .grupo[open]
+    .grupo-icone {
+
+      transform:
+        rotate(45deg);
+
+      color:
+        var(--blue);
+
+    }
+
+
+    .grupo-conteudo {
+
+      padding:
+        0 3px 13px;
+
+    }
+
+
+    /* ========================================
+       OUTROS TRABALHOS
+    ======================================== */
+
+    .trabalho {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        18px;
+
+      padding:
+        12px 0;
+
+      text-decoration:
+        none;
+
+    }
+
+
+    .trabalho strong {
+
+      display:
+        block;
+
+      color:
+        #cbd5e1;
+
+      font-size:
+        .78rem;
+
+      font-weight:
+        600;
+
+    }
+
+
+    .trabalho small {
+
+      display:
+        block;
+
+      margin-top:
+        3px;
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .68rem;
+
+      line-height:
+        1.4;
+
+    }
+
+
+    .trabalho-seta {
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .8rem;
+
+    }
+
+
+    .trabalho:hover strong {
+
+      color:
+        var(--text);
+
+    }
+
+
+    .trabalho:hover
+    .trabalho-seta {
+
+      color:
+        var(--blue);
+
+    }
+
+
+    /* ========================================
+       FORMAÇÃO
+    ======================================== */
+
+    .formacao-item {
+
+      padding:
+        10px 0;
+
+    }
+
+
+    .formacao-item strong {
+
+      display:
+        block;
+
+      color:
+        #cbd5e1;
+
+      font-size:
+        .75rem;
+
+      font-weight:
+        550;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    .formacao-item small {
+
+      display:
+        block;
+
+      margin-top:
+        3px;
+
+      max-width:
+        420px;
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .67rem;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    /* ========================================
+       CONTATO
+    ======================================== */
+
+    .contato {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        18px;
+
+      margin-top:
+        29px;
+
+      padding:
+        15px 3px 0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        .75rem;
+
+      text-decoration:
+        none;
+
+    }
+
+
+    .contato-label {
+
+      color:
+        var(--muted-dark);
+
+      font-size:
+        .64rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        .07em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .contato-endereco {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+      color:
+        #aeb9c8;
+
+      text-align:
+        right;
+
+      overflow-wrap:
+        anywhere;
+
+    }
+
+
+    .contato:hover
+    .contato-endereco {
+
+      color:
+        var(--text);
+
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (
+      max-width: 520px
+    ) {
+
+
+      body {
+
+        background:
+
+          radial-gradient(
+            circle at 10% 0%,
+            rgba(
+              59,
+              130,
+              246,
+              .09
+            ),
+            transparent 29%
+          ),
+
+          var(--bg);
+
       }
 
-      .content-box {
-        max-width: 100%;
+
+      .page {
+
+        min-height:
+          100dvh;
+
+        padding:
+          0;
+
       }
 
-      .card {
+
+      .container {
+
+        max-width:
+          none;
+
+      }
+
+
+      .perfil {
+
+        min-height:
+          100dvh;
+
         padding:
-          1.35rem
-          0.8rem
-          1.2rem;
+          27px 21px 30px;
+
+        border:
+          0;
 
         border-radius:
-          20px;
+          0;
+
+        background:
+          transparent;
+
+        backdrop-filter:
+          none;
+
+        -webkit-backdrop-filter:
+          none;
+
+        box-shadow:
+          none;
+
       }
+
+
+      .lang {
+
+        top:
+          25px;
+
+        right:
+          21px;
+
+      }
+
+
+      .lang a {
+
+        min-width:
+          31px;
+
+        height:
+          24px;
+
+        padding:
+          0 7px;
+
+        font-size:
+          .57rem;
+
+      }
+
 
       .topo {
+
         padding:
-          1.15rem
-          0
-          0.8rem;
+          11px 0 29px;
+
       }
+
 
       .tag {
+
+        min-height:
+          23px;
+
         margin-bottom:
-          0.75rem;
+          18px;
 
         padding:
-          0.38rem
-          0.65rem;
+          0 8px;
 
         font-size:
-          0.68rem;
-      }
-
-      .nome {
-        font-size:
-          1.2rem;
-      }
-
-      .profissao {
-        font-size:
-          0.88rem;
-      }
-
-      .links {
-        gap: 0.65rem;
-
-        margin-top:
-          0.65rem;
-      }
-
-      .link-btn {
-        padding:
-          0.9rem
-          0.7rem;
-
-        border-radius:
-          15px;
-      }
-
-      .link-btn span {
-        font-size:
-          0.94rem;
-      }
-
-      .link-btn small {
-        max-width:
-          280px;
-
-        font-size:
-          0.72rem;
-
-        line-height:
-          1.35;
-      }
-
-      .secao {
-        margin-top:
-          1.35rem;
-      }
-
-      .secao-titulo {
-        margin-bottom:
-          0.65rem;
-
-        font-size:
-          0.75rem;
-      }
-
-      .secao .links {
-        margin-top: 0;
-      }
-
-      .formacao {
-        margin-top:
-          1.25rem;
-
-        padding:
-          1rem
-          0.25rem
-          0;
-
-        font-size:
-          0.68rem;
-
-        line-height:
-          1.55;
+          .59rem;
 
         letter-spacing:
-          0;
+          .065em;
+
       }
 
-      .formacao span {
+
+      .nome {
+
+        max-width:
+          270px;
+
         margin-bottom:
-          0.22rem;
-      }
+          6px;
 
-      .lang-switch {
-        top: 0.65rem;
-
-        right: 0.7rem;
-      }
-
-      .lang-switch a {
-        padding:
-          0.25rem
-          0.42rem;
+        padding-right:
+          35px;
 
         font-size:
-          0.6rem;
+          1.34rem;
+
       }
+
+
+      .profissao {
+
+        font-size:
+          .83rem;
+
+      }
+
+
+      .titulo-secao {
+
+        margin-bottom:
+          8px;
+
+        font-size:
+          .6rem;
+
+      }
+
+
+      .projeto {
+
+        min-height:
+          65px;
+
+        gap:
+          14px;
+
+        padding:
+          12px 2px;
+
+      }
+
+
+      .projeto strong {
+
+        margin-bottom:
+          4px;
+
+        font-size:
+          .87rem;
+
+      }
+
+
+      .projeto small {
+
+        max-width:
+          270px;
+
+        font-size:
+          .68rem;
+
+        line-height:
+          1.4;
+
+      }
+
+
+      .projeto:hover {
+
+        padding-left:
+          2px;
+
+        padding-right:
+          2px;
+
+      }
+
+
+      .projeto-seta {
+
+        font-size:
+          .85rem;
+
+      }
+
+
+      .grupos {
+
+        margin-top:
+          24px;
+
+      }
+
+
+      .grupo summary {
+
+        min-height:
+          51px;
+
+        font-size:
+          .74rem;
+
+      }
+
+
+      .grupo-conteudo {
+
+        padding-bottom:
+          11px;
+
+      }
+
+
+      .trabalho {
+
+        padding:
+          10px 0;
+
+      }
+
+
+      .trabalho strong {
+
+        font-size:
+          .74rem;
+
+      }
+
+
+      .trabalho small {
+
+        font-size:
+          .64rem;
+
+      }
+
+
+      .formacao-item {
+
+        padding:
+          9px 0;
+
+      }
+
+
+      .formacao-item strong {
+
+        font-size:
+          .7rem;
+
+      }
+
+
+      .formacao-item small {
+
+        font-size:
+          .63rem;
+
+      }
+
+
+      .contato {
+
+        margin-top:
+          25px;
+
+        padding-top:
+          13px;
+
+        font-size:
+          .69rem;
+
+      }
+
+
+      .contato-label {
+
+        font-size:
+          .58rem;
+
+      }
+
+
     }
+
+
+    /* ========================================
+       ACESSIBILIDADE
+    ======================================== */
+
+    @media (
+      prefers-reduced-motion:
+      reduce
+    ) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+        scroll-behavior:
+          auto !important;
+
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <main class="page-clean">
+  <main class="page">
 
-    <div class="content-box">
+    <div class="container">
 
-      <section class="card">
+      <section class="perfil">
 
-        <!-- LANGUAGE -->
 
-        <div class="lang-switch">
+        <!-- IDIOMA -->
+
+        <div class="lang">
+
           <a
             href="/en/"
             aria-label="Versão em inglês"
           >
             EN
           </a>
+
         </div>
 
 
-        <!-- PROFILE -->
+        <!-- PERFIL -->
 
-        <div class="topo">
+        <header class="topo">
 
           <div class="tag">
             Software • Produtos digitais
           </div>
 
-          <div class="nome">
+          <h1 class="nome">
             Guilherme Felipe Molon
-          </div>
+          </h1>
 
-          <div class="profissao">
+          <p class="profissao">
             Desenvolvedor de Software
-          </div>
-
-        </div>
-
-
-        <!-- MAIN PROJECTS -->
-
-        <div class="links">
-
-          <a
-            href="https://www.raizesdaserra.com.br"
-            class="link-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              Raízes da Serra
-            </span>
-
-            <small>
-              Portal de turismo e cultura da Serra Gaúcha
-            </small>
-          </a>
-
-
-          <a
-            href="https://m2radar.com.br"
-            class="link-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              RadarM2
-            </span>
-
-            <small>
-              Plataforma de dados do mercado imobiliário
-            </small>
-          </a>
-
-
-          <a
-            href="https://www.meualuguel.app.br"
-            class="link-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              Meu Aluguel
-            </span>
-
-            <small>
-              Sistema para proprietários de imóveis
-            </small>
-          </a>
-
-
-          <a
-            href="https://www.instagram.com/nona_amelia_/"
-            class="link-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              Nona Amélia
-            </span>
-
-            <small>
-              Conteúdo regional e comunidade digital
-            </small>
-          </a>
-
-        </div>
-
-
-        <!-- OTHER WORK -->
-
-        <div class="secao">
-
-          <p class="secao-titulo">
-            Outros trabalhos
           </p>
 
-          <div class="links">
+        </header>
+
+
+        <!-- PROJETOS PRINCIPAIS -->
+
+        <section>
+
+          <p class="titulo-secao">
+            Trabalhos selecionados
+          </p>
+
+
+          <div class="projetos">
+
 
             <a
-              href="https://www.sinuelo.com.br"
-              class="link-btn"
+              href="https://www.raizesdaserra.com.br"
+              class="projeto"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>
-                Vinícola Sinuelo
+
+              <div class="projeto-conteudo">
+
+                <strong>
+                  Raízes da Serra
+                </strong>
+
+                <small>
+                  Portal de turismo e cultura da Serra Gaúcha
+                </small>
+
+              </div>
+
+              <span
+                class="projeto-seta"
+                aria-hidden="true"
+              >
+                ↗
               </span>
 
-              <small>
-                Site institucional
-              </small>
             </a>
 
 
             <a
-              href="https://www.instagram.com/empsaomarcos/"
-              class="link-btn"
+              href="https://m2radar.com.br"
+              class="projeto"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>
-                Empório São Marcos
+
+              <div class="projeto-conteudo">
+
+                <strong>
+                  RadarM2
+                </strong>
+
+                <small>
+                  Plataforma de dados do mercado imobiliário
+                </small>
+
+              </div>
+
+              <span
+                class="projeto-seta"
+                aria-hidden="true"
+              >
+                ↗
               </span>
 
-              <small>
-                Vinhos, presentes e produtos coloniais
-              </small>
             </a>
+
+
+            <a
+              href="https://www.meualuguel.app.br"
+              class="projeto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="projeto-conteudo">
+
+                <strong>
+                  Meu Aluguel
+                </strong>
+
+                <small>
+                  Sistema para proprietários de imóveis
+                </small>
+
+              </div>
+
+              <span
+                class="projeto-seta"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/nona_amelia_/"
+              class="projeto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="projeto-conteudo">
+
+                <strong>
+                  Nona Amélia
+                </strong>
+
+                <small>
+                  Conteúdo regional e comunidade digital
+                </small>
+
+              </div>
+
+              <span
+                class="projeto-seta"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
+
+            </a>
+
 
           </div>
 
-        </div>
+        </section>
 
 
-        <!-- CONTACT -->
+        <!-- INFORMAÇÕES SECUNDÁRIAS -->
 
-        <div class="secao">
+        <section
+          class="grupos"
+          aria-label="Informações adicionais"
+        >
 
-          <p class="secao-titulo">
+
+          <!-- OUTROS TRABALHOS -->
+
+          <details class="grupo">
+
+            <summary>
+
+              <span>
+                Outros trabalhos
+              </span>
+
+              <span
+                class="grupo-icone"
+                aria-hidden="true"
+              >
+                +
+              </span>
+
+            </summary>
+
+
+            <div class="grupo-conteudo">
+
+
+              <a
+                href="https://www.sinuelo.com.br"
+                class="trabalho"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <div>
+
+                  <strong>
+                    Vinícola Sinuelo
+                  </strong>
+
+                  <small>
+                    Site institucional
+                  </small>
+
+                </div>
+
+                <span
+                  class="trabalho-seta"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+
+              </a>
+
+
+              <a
+                href="https://www.instagram.com/empsaomarcos/"
+                class="trabalho"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <div>
+
+                  <strong>
+                    Empório São Marcos
+                  </strong>
+
+                  <small>
+                    Vinhos, presentes e produtos coloniais
+                  </small>
+
+                </div>
+
+                <span
+                  class="trabalho-seta"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+
+              </a>
+
+
+            </div>
+
+          </details>
+
+
+          <!-- FORMAÇÃO -->
+
+          <details class="grupo">
+
+            <summary>
+
+              <span>
+                Formação
+              </span>
+
+              <span
+                class="grupo-icone"
+                aria-hidden="true"
+              >
+                +
+              </span>
+
+            </summary>
+
+
+            <div class="grupo-conteudo">
+
+
+              <div class="formacao-item">
+
+                <strong>
+                  Análise e Desenvolvimento de Sistemas — UCS
+                </strong>
+
+                <small>
+                  Em andamento · continuidade prevista em Engenharia de Software
+                </small>
+
+              </div>
+
+
+              <div class="formacao-item">
+
+                <strong>
+                  Bacharelado em Administração — UCS
+                </strong>
+
+              </div>
+
+
+              <div class="formacao-item">
+
+                <strong>
+                  MBA in Marketing — FGV
+                </strong>
+
+              </div>
+
+
+            </div>
+
+          </details>
+
+
+        </section>
+
+
+        <!-- CONTATO -->
+
+        <a
+          href="mailto:contact@guilhermemolon.com"
+          class="contato"
+        >
+
+          <span class="contato-label">
             Contato
-          </p>
+          </span>
 
-          <a
-            href="mailto:contact@guilhermemolon.com"
-            class="link-btn"
-          >
-            <span>
-              E-mail
+          <span class="contato-endereco">
+
+            contact@guilhermemolon.com
+
+            <span aria-hidden="true">
+              ↗
             </span>
 
-            <small>
-              contact@guilhermemolon.com
-            </small>
-          </a>
-
-        </div>
-
-
-        <!-- EDUCATION -->
-
-        <div class="formacao">
-
-          <span>
-            Análise e Desenvolvimento de Sistemas — UCS
-
-            <small>
-              Em andamento · continuidade prevista em Engenharia de Software
-            </small>
           </span>
 
-          <span>
-            Bacharelado em Administração — UCS
-          </span>
+        </a>
 
-          <span>
-            MBA in Marketing — FGV
-          </span>
-
-        </div>
 
       </section>
 
@@ -843,8 +1747,9 @@
   <script
     data-goatcounter="https://gfmolon.goatcounter.com/count"
     async
-    src="//gc.zgo.at/count.js">
-  </script>
+    src="//gc.zgo.at/count.js"
+  ></script>
 
 </body>
+
 </html>
