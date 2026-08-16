@@ -26,7 +26,7 @@
 
   <meta
     name="theme-color"
-    content="#0f172a"
+    content="#090b0d"
   >
 
   <link
@@ -49,7 +49,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   >
 
@@ -58,14 +58,14 @@
     :root {
 
       --bg:
-        #0b1120;
+        #090b0d;
 
       --card:
         rgba(
-          255,
-          255,
-          255,
-          .045
+          13,
+          16,
+          15,
+          .92
         );
 
       --border:
@@ -88,16 +88,16 @@
         #f8fafc;
 
       --text-soft:
-        #dbe3ee;
+        #dce3df;
 
       --muted:
-        #94a3b8;
+        #909a95;
 
       --muted-dark:
-        #64748b;
+        #69736e;
 
-      --blue:
-        #8cbcff;
+      --accent:
+        #7dd3a7;
 
     }
 
@@ -139,24 +139,8 @@
 
         radial-gradient(
           circle at 15% 0%,
-          rgba(
-            59,
-            130,
-            246,
-            .12
-          ),
+          rgba(45, 212, 140, .075),
           transparent 32%
-        ),
-
-        radial-gradient(
-          circle at 90% 100%,
-          rgba(
-            124,
-            58,
-            237,
-            .08
-          ),
-          transparent 30%
         ),
 
         var(--bg);
@@ -244,24 +228,18 @@
         var(--border);
 
       border-radius:
-        26px;
+        18px;
 
       background:
         var(--card);
 
-      backdrop-filter:
-        blur(14px);
-
-      -webkit-backdrop-filter:
-        blur(14px);
-
       box-shadow:
-        0 28px 80px
+        0 20px 60px
         rgba(
           0,
           0,
           0,
-          .22
+          .18
         );
 
       animation:
@@ -269,7 +247,6 @@
         ease-out both;
 
     }
-
 
     /* ========================================
        IDIOMA
@@ -412,7 +389,7 @@
         );
 
       font-size:
-        .67rem;
+        .69rem;
 
       font-weight:
         650;
@@ -485,7 +462,7 @@
         var(--muted-dark);
 
       font-size:
-        .66rem;
+        .69rem;
 
       font-weight:
         700;
@@ -599,10 +576,10 @@
         var(--muted-dark);
 
       font-size:
-        .73rem;
+        .76rem;
 
       font-weight:
-        450;
+        400;
 
       line-height:
         1.45;
@@ -643,7 +620,7 @@
     .projeto-seta {
 
       color:
-        var(--blue);
+        var(--accent);
 
       transform:
         translate(
@@ -671,6 +648,10 @@
       margin-top:
         29px;
 
+    }
+
+    .grupos .grupo:first-child {
+      border-top: 0;
     }
 
 
@@ -713,10 +694,10 @@
         0 3px;
 
       color:
-        #aeb9c8;
+        #c1c9c5;
 
       font-size:
-        .78rem;
+        .81rem;
 
       font-weight:
         600;
@@ -773,7 +754,7 @@
         rotate(45deg);
 
       color:
-        var(--blue);
+        var(--accent);
 
     }
 
@@ -873,7 +854,7 @@
     .trabalho-seta {
 
       color:
-        var(--blue);
+        var(--accent);
 
     }
 
@@ -975,7 +956,7 @@
         var(--muted-dark);
 
       font-size:
-        .64rem;
+        .68rem;
 
       font-weight:
         700;
@@ -1037,9 +1018,9 @@
           radial-gradient(
             circle at 10% 0%,
             rgba(
-              59,
-              130,
-              246,
+              45,
+              212,
+              140,
               .09
             ),
             transparent 29%
