@@ -136,13 +136,6 @@
         var(--text);
 
       background:
-
-        radial-gradient(
-          circle at 15% 0%,
-          rgba(45, 212, 140, .075),
-          transparent 32%
-        ),
-
         var(--bg);
 
     }
@@ -210,7 +203,7 @@
         100%;
 
       max-width:
-        580px;
+        620px;
 
     }
 
@@ -224,26 +217,19 @@
         32px;
 
       border:
-        1px solid
-        var(--border);
+        0;
 
       border-radius:
-        18px;
+        0;
 
       background:
-        var(--card);
+        transparent;
 
       box-shadow:
-        0 20px 60px
-        rgba(
-          0,
-          0,
-          0,
-          .18
-        );
+        none;
 
       animation:
-        entrada .6s
+        entrada .35s
         ease-out both;
 
     }
@@ -354,9 +340,8 @@
 
 
     .tag {
-
       display:
-        inline-flex;
+        none;
 
       align-items:
         center;
@@ -415,7 +400,7 @@
         var(--text);
 
       font-size:
-        1.55rem;
+        1.82rem;
 
       font-weight:
         800;
@@ -438,7 +423,7 @@
         var(--muted);
 
       font-size:
-        .94rem;
+        1rem;
 
       font-weight:
         500;
@@ -462,7 +447,7 @@
         var(--muted-dark);
 
       font-size:
-        .69rem;
+        .72rem;
 
       font-weight:
         700;
@@ -509,10 +494,10 @@
         20px;
 
       min-height:
-        72px;
+        82px;
 
       padding:
-        14px 4px;
+        16px 4px;
 
       border-bottom:
         1px solid
@@ -556,7 +541,7 @@
         var(--text-soft);
 
       font-size:
-        .93rem;
+        1.02rem;
 
       font-weight:
         650;
@@ -576,7 +561,7 @@
         var(--muted-dark);
 
       font-size:
-        .76rem;
+        .82rem;
 
       font-weight:
         400;
@@ -697,7 +682,7 @@
         #c1c9c5;
 
       font-size:
-        .81rem;
+        .88rem;
 
       font-weight:
         600;
@@ -803,7 +788,7 @@
         #cbd5e1;
 
       font-size:
-        .78rem;
+        .86rem;
 
       font-weight:
         600;
@@ -823,7 +808,7 @@
         var(--muted-dark);
 
       font-size:
-        .68rem;
+        .76rem;
 
       line-height:
         1.4;
@@ -880,7 +865,7 @@
         #cbd5e1;
 
       font-size:
-        .75rem;
+        .82rem;
 
       font-weight:
         550;
@@ -906,7 +891,7 @@
         var(--muted-dark);
 
       font-size:
-        .67rem;
+        .74rem;
 
       line-height:
         1.5;
@@ -930,7 +915,13 @@
         space-between;
 
       gap:
-        18px;
+        8px;
+
+      align-items:
+        flex-start;
+
+      flex-direction:
+        column;
 
       margin-top:
         29px;
@@ -942,7 +933,7 @@
         var(--muted);
 
       font-size:
-        .75rem;
+        .82rem;
 
       text-decoration:
         none;
@@ -956,7 +947,7 @@
         var(--muted-dark);
 
       font-size:
-        .68rem;
+        .7rem;
 
       font-weight:
         700;
@@ -985,7 +976,7 @@
         #aeb9c8;
 
       text-align:
-        right;
+        left;
 
       overflow-wrap:
         anywhere;
@@ -1012,20 +1003,7 @@
 
 
       body {
-
         background:
-
-          radial-gradient(
-            circle at 10% 0%,
-            rgba(
-              45,
-              212,
-              140,
-              .09
-            ),
-            transparent 29%
-          ),
-
           var(--bg);
 
       }
@@ -1056,7 +1034,7 @@
           100dvh;
 
         padding:
-          27px 21px 30px;
+          32px 24px 36px;
 
         border:
           0;
@@ -1082,10 +1060,10 @@
       .lang {
 
         top:
-          25px;
+          28px;
 
         right:
-          21px;
+          24px;
 
       }
 
@@ -1093,16 +1071,16 @@
       .lang a {
 
         min-width:
-          31px;
+          38px;
 
         height:
-          24px;
+          30px;
 
         padding:
           0 7px;
 
         font-size:
-          .57rem;
+          .68rem;
 
       }
 
@@ -1110,27 +1088,14 @@
       .topo {
 
         padding:
-          11px 0 29px;
+          18px 0 38px;
 
       }
 
 
       .tag {
-
-        min-height:
-          23px;
-
-        margin-bottom:
-          18px;
-
-        padding:
-          0 8px;
-
-        font-size:
-          .59rem;
-
-        letter-spacing:
-          .065em;
+        display:
+          none;
 
       }
 
@@ -1138,7 +1103,7 @@
       .nome {
 
         max-width:
-          270px;
+          310px;
 
         margin-bottom:
           6px;
@@ -1147,7 +1112,10 @@
           35px;
 
         font-size:
-          1.34rem;
+          1.72rem;
+
+        line-height:
+          1.15;
 
       }
 
@@ -1155,7 +1123,7 @@
       .profissao {
 
         font-size:
-          .83rem;
+          1rem;
 
       }
 
@@ -1163,10 +1131,10 @@
       .titulo-secao {
 
         margin-bottom:
-          8px;
+          10px;
 
         font-size:
-          .6rem;
+          .72rem;
 
       }
 
@@ -1174,13 +1142,13 @@
       .projeto {
 
         min-height:
-          65px;
+          82px;
 
         gap:
           14px;
 
         padding:
-          12px 2px;
+          16px 2px;
 
       }
 
@@ -1191,7 +1159,7 @@
           4px;
 
         font-size:
-          .87rem;
+          1.02rem;
 
       }
 
@@ -1199,13 +1167,13 @@
       .projeto small {
 
         max-width:
-          270px;
+          310px;
 
         font-size:
-          .68rem;
+          .82rem;
 
         line-height:
-          1.4;
+          1.5;
 
       }
 
@@ -1224,7 +1192,7 @@
       .projeto-seta {
 
         font-size:
-          .85rem;
+          1rem;
 
       }
 
@@ -1232,7 +1200,7 @@
       .grupos {
 
         margin-top:
-          24px;
+          32px;
 
       }
 
@@ -1240,10 +1208,10 @@
       .grupo summary {
 
         min-height:
-          51px;
+          58px;
 
         font-size:
-          .74rem;
+          .88rem;
 
       }
 
@@ -1259,7 +1227,7 @@
       .trabalho {
 
         padding:
-          10px 0;
+          13px 0;
 
       }
 
@@ -1267,7 +1235,7 @@
       .trabalho strong {
 
         font-size:
-          .74rem;
+          .86rem;
 
       }
 
@@ -1275,7 +1243,7 @@
       .trabalho small {
 
         font-size:
-          .64rem;
+          .76rem;
 
       }
 
@@ -1291,7 +1259,7 @@
       .formacao-item strong {
 
         font-size:
-          .7rem;
+          .82rem;
 
       }
 
@@ -1299,21 +1267,30 @@
       .formacao-item small {
 
         font-size:
-          .63rem;
+          .74rem;
 
       }
 
 
       .contato {
 
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        gap:
+          8px;
+
         margin-top:
-          25px;
+          32px;
 
         padding-top:
           13px;
 
         font-size:
-          .69rem;
+          .82rem;
 
       }
 
@@ -1321,8 +1298,14 @@
       .contato-label {
 
         font-size:
-          .58rem;
+          .68rem;
 
+      }
+
+
+      .contato-endereco {
+        text-align:
+          left;
       }
 
 
