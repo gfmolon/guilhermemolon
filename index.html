@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 
@@ -392,22 +393,23 @@
 
     .digital-included {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 24px;
+      grid-template-columns: 1fr;
+      gap: 10px;
 
       margin: 0 0 36px;
       padding: 0;
 
       list-style: none;
-      border-top: 1px solid rgba(244, 247, 251, 0.1);
     }
 
     .digital-included li {
       position: relative;
-      padding: 13px 4px 13px 22px;
+      padding: 15px 16px 15px 42px;
 
       color: rgba(244, 247, 251, 0.68);
-      border-bottom: 1px solid rgba(244, 247, 251, 0.1);
+      background: rgba(244, 247, 251, 0.025);
+      border: 1px solid rgba(244, 247, 251, 0.09);
+      border-radius: 8px;
 
       font-size: 0.75rem;
       line-height: 1.55;
@@ -415,12 +417,21 @@
 
     .digital-included li::before {
       position: absolute;
-      top: 13px;
-      left: 1px;
+      top: 15px;
+      left: 16px;
 
       color: #9acd32;
       font-weight: 700;
       content: "✓";
+    }
+
+    .digital-included strong {
+      display: block;
+      margin-bottom: 2px;
+
+      color: #f4f7fb;
+      font-size: 0.79rem;
+      font-weight: 600;
     }
 
     .digital-direct {
@@ -583,7 +594,7 @@
 
       .digital-included {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 10px;
       }
 
       .digital-modal-footer {
@@ -692,12 +703,12 @@
           </span>
 
           <span class="digital-highlight-title">
-            Presença Digital para empresas e profissionais
+            Mais do que um site
           </span>
 
           <span class="digital-highlight-description">
-            Site profissional, estrutura técnica e divulgação regional
-            por <span class="digital-highlight-price">R$ 300/mês</span>.
+            Site, manutenção e visibilidade regional por
+            <span class="digital-highlight-price">R$ 300/mês</span>.
           </span>
         </span>
 
@@ -869,12 +880,11 @@
       </span>
 
       <h2 id="digital-modal-title">
-        Sua empresa apresentada de forma profissional na internet.
+        Uma presença profissional completa.
       </h2>
 
       <p class="digital-modal-lead">
-        Você cuida do seu negócio. Eu cuido do seu site e da estrutura
-        necessária para fortalecer sua presença digital.
+        Você cuida do seu negócio. Eu cuido da sua presença na internet.
       </p>
 
       <div class="digital-price" aria-label="Valor de 300 reais por mês">
@@ -888,28 +898,27 @@
       </p>
 
       <section aria-labelledby="digital-included-title">
-        <h3 id="digital-included-title">O pacote inclui</h3>
+        <h3 id="digital-included-title">Tudo o que sua empresa precisa</h3>
 
         <ul class="digital-included">
-          <li>Site profissional personalizado</li>
-          <li>Domínio próprio</li>
-          <li>Hospedagem e certificado SSL</li>
-          <li>Site responsivo</li>
-          <li>Contatos, horários e localização</li>
-          <li>Estrutura técnica preparada para SEO</li>
-          <li>Manutenção técnica</li>
-          <li>Alterações de conteúdo</li>
-          <li>Destaque no Guia de Negócios</li>
-          <li>Presença no portal Raízes da Serra</li>
-          <li>Presença no Mapa da Serra</li>
-          <li>Uma divulgação mensal nas redes Amélia</li>
+          <li>
+            <strong>Site profissional completo</strong>
+            Personalizado, responsivo e preparado para o Google.
+          </li>
+          <li>
+            <strong>Domínio, hospedagem e manutenção</strong>
+            Toda a parte técnica e pequenas alterações incluídas.
+          </li>
+          <li>
+            <strong>Mais visibilidade regional</strong>
+            Presença no Raízes da Serra e divulgação mensal nas redes Amélia.
+          </li>
         </ul>
       </section>
 
         <div class="digital-direct">
           <strong>Atendimento direto e personalizado.</strong>
-          Do desenvolvimento à manutenção, o contato e o acompanhamento
-          são feitos diretamente comigo.
+          Você fala diretamente comigo do início à manutenção.
         </div>
 
       <section
