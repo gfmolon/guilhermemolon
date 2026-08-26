@@ -1,31 +1,652 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
   <title>Guilherme Molon — Desenvolvedor de Software</title>
 
-    <meta
+  <meta
     name="description"
-    content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, criando sistemas web e produtos digitais."
-    >
+    content="Guilherme Molon é desenvolvedor de software na Serra Gaúcha, criando sistemas web, produtos digitais e sites profissionais para empresas."
+  >
 
+  <meta
+    name="keywords"
+    content="Guilherme Molon, desenvolvedor de software, criação de sites, sites profissionais, presença digital, Serra Gaúcha, São Marcos RS"
+  >
+
+  <meta name="author" content="Guilherme Molon">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0a0a">
+
+  <link
+    rel="canonical"
+    href="https://guilhermemolon.com/"
+  >
+
+  <meta
+    property="og:title"
+    content="Guilherme Molon — Desenvolvedor de Software"
+  >
+
+  <meta
+    property="og:description"
+    content="Desenvolvimento de sistemas web, produtos digitais e sites profissionais para empresas."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://guilhermemolon.com/"
+  >
+
+  <meta
+    property="og:locale"
+    content="pt_BR"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Guilherme Molon"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Guilherme Molon — Desenvolvedor de Software"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Desenvolvimento de sistemas web, produtos digitais e sites profissionais para empresas."
+  >
 
   <link
     rel="icon"
     href="https://res.cloudinary.com/dgsadszgq/image/upload/v1781267156/favicon_g41du6.ico"
   >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet"
-    >
+  >
 
   <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /*
+     * Destaque do Pacote Presença Digital
+     */
+
+    .digital-highlight {
+      width: 100%;
+      margin: 42px 0 58px;
+      padding: 0;
+
+      color: inherit;
+      background: transparent;
+      border: 0;
+      border-radius: 12px;
+
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .digital-highlight-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      padding: 24px 26px;
+
+      overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(154, 205, 50, 0.12),
+          rgba(154, 205, 50, 0.025)
+        );
+      border: 1px solid rgba(154, 205, 50, 0.45);
+      border-radius: 12px;
+
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .digital-highlight-content::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 3px;
+      background: #9acd32;
+      content: "";
+    }
+
+    .digital-highlight:hover .digital-highlight-content {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(154, 205, 50, 0.17),
+          rgba(154, 205, 50, 0.04)
+        );
+      border-color: rgba(154, 205, 50, 0.75);
+      transform: translateY(-2px);
+    }
+
+    .digital-highlight:focus-visible {
+      outline: 2px solid #9acd32;
+      outline-offset: 4px;
+    }
+
+    .digital-highlight-text {
+      min-width: 0;
+    }
+
+    .digital-highlight-label {
+      display: block;
+      margin-bottom: 9px;
+
+      color: #9acd32;
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .digital-highlight-title {
+      display: block;
+      margin-bottom: 8px;
+
+      color: #f4f7fb;
+      font-size: 0.96rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .digital-highlight-description {
+      display: block;
+
+      color: rgba(244, 247, 251, 0.6);
+      font-size: 0.78rem;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .digital-highlight-price {
+      color: #f4f7fb;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .digital-highlight-action {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 9px;
+
+      color: #9acd32;
+      font-size: 0.74rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .digital-highlight-arrow {
+      font-size: 1rem;
+      transition: transform 180ms ease;
+    }
+
+    .digital-highlight:hover .digital-highlight-arrow {
+      transform: translateX(4px);
+    }
+
+    /*
+     * Lightbox
+     */
+
+    .digital-modal {
+      width: min(720px, calc(100% - 32px));
+      max-height: min(86vh, 860px);
+      margin: auto;
+      padding: 0;
+
+      color: #f4f7fb;
+      background: #101211;
+      border: 1px solid rgba(154, 205, 50, 0.38);
+      border-radius: 14px;
+
+      overflow: hidden;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.72);
+    }
+
+    .digital-modal::backdrop {
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .digital-modal-inner {
+      position: relative;
+      max-height: min(86vh, 860px);
+      padding: 40px;
+
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-color: rgba(154, 205, 50, 0.45) transparent;
+      scrollbar-width: thin;
+    }
+
+    .digital-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 17px;
+
+      display: grid;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+
+      color: rgba(244, 247, 251, 0.55);
+      background: rgba(244, 247, 251, 0.045);
+      border: 1px solid rgba(244, 247, 251, 0.1);
+      border-radius: 50%;
+
+      font: inherit;
+      font-size: 1.15rem;
+      line-height: 1;
+      cursor: pointer;
+      place-items: center;
+
+      transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+    }
+
+    .digital-modal-close:hover {
+      color: #9acd32;
+      background: rgba(154, 205, 50, 0.08);
+      border-color: rgba(154, 205, 50, 0.4);
+    }
+
+    .digital-modal-close:focus-visible {
+      outline: 2px solid #9acd32;
+      outline-offset: 3px;
+    }
+
+    .digital-modal-label {
+      display: block;
+      margin: 0 52px 14px 0;
+
+      color: #9acd32;
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .digital-modal h2 {
+      max-width: 590px;
+      margin: 0 52px 16px 0;
+
+      color: #f4f7fb;
+      font-size: clamp(1.55rem, 4vw, 2.35rem);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .digital-modal-lead {
+      max-width: 620px;
+      margin: 0 0 28px;
+
+      color: rgba(244, 247, 251, 0.64);
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .digital-price {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+
+      margin-bottom: 34px;
+      padding: 20px 22px;
+
+      background: rgba(154, 205, 50, 0.07);
+      border: 1px solid rgba(154, 205, 50, 0.3);
+      border-radius: 10px;
+    }
+
+    .digital-price-prefix {
+      color: rgba(244, 247, 251, 0.66);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .digital-price-value {
+      color: #9acd32;
+      font-size: clamp(2rem, 7vw, 3rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .digital-price-period {
+      color: rgba(244, 247, 251, 0.55);
+      font-size: 0.82rem;
+    }
+
+    .digital-modal h3 {
+      margin: 0 0 16px;
+
+      color: #f4f7fb;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .digital-included {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 24px;
+
+      margin: 0 0 36px;
+      padding: 0;
+
+      list-style: none;
+      border-top: 1px solid rgba(244, 247, 251, 0.1);
+    }
+
+    .digital-included li {
+      position: relative;
+      padding: 13px 4px 13px 22px;
+
+      color: rgba(244, 247, 251, 0.68);
+      border-bottom: 1px solid rgba(244, 247, 251, 0.1);
+
+      font-size: 0.75rem;
+      line-height: 1.55;
+    }
+
+    .digital-included li::before {
+      position: absolute;
+      top: 13px;
+      left: 1px;
+
+      color: #9acd32;
+      font-weight: 700;
+      content: "✓";
+    }
+
+    .digital-direct {
+      margin: 0 0 30px;
+      padding: 18px 20px;
+
+      color: rgba(244, 247, 251, 0.65);
+      background: rgba(244, 247, 251, 0.025);
+      border-left: 2px solid #9acd32;
+
+      font-size: 0.76rem;
+      line-height: 1.75;
+    }
+
+    .digital-direct strong {
+      color: #f4f7fb;
+      font-weight: 600;
+    }
+
+    .digital-options {
+      margin-bottom: 32px;
+    }
+
+    .digital-options p {
+      margin: 8px 0;
+
+      color: rgba(244, 247, 251, 0.57);
+      font-size: 0.72rem;
+      line-height: 1.6;
+    }
+
+    .digital-options strong {
+      color: rgba(244, 247, 251, 0.8);
+      font-weight: 500;
+    }
+
+    .digital-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+
+      padding-top: 26px;
+      border-top: 1px solid rgba(244, 247, 251, 0.11);
+    }
+
+    .digital-limited {
+      margin: 0;
+
+      color: rgba(244, 247, 251, 0.56);
+      font-size: 0.7rem;
+      line-height: 1.55;
+    }
+
+    .digital-limited strong {
+      display: block;
+      margin-bottom: 3px;
+
+      color: #9acd32;
+      font-size: 0.72rem;
+    }
+
+    .digital-contact-button {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 44px;
+      padding: 12px 18px;
+
+      color: #0a0a0a;
+      background: #9acd32;
+      border-radius: 6px;
+
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-decoration: none;
+
+      transition:
+        background-color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .digital-contact-button:hover {
+      color: #0a0a0a;
+      background: #b4df48;
+      transform: translateY(-1px);
+    }
+
+    .digital-contact-button:focus-visible {
+      outline: 2px solid #f4f7fb;
+      outline-offset: 3px;
+    }
+
+    /*
+     * Celulares
+     */
+
+    @media (max-width: 640px) {
+      .digital-highlight {
+        margin: 32px 0 48px;
+      }
+
+      .digital-highlight-content {
+        align-items: flex-start;
+        gap: 18px;
+        padding: 20px 18px 20px 21px;
+      }
+
+      .digital-highlight-title {
+        font-size: 0.86rem;
+      }
+
+      .digital-highlight-description {
+        font-size: 0.72rem;
+      }
+
+      .digital-highlight-action-text {
+        display: none;
+      }
+
+      .digital-highlight-action {
+        padding-top: 23px;
+      }
+
+      .digital-modal {
+        width: calc(100% - 20px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 12px;
+      }
+
+      .digital-modal-inner {
+        max-height: calc(100dvh - 20px);
+        padding: 28px 20px 24px;
+      }
+
+      .digital-modal-close {
+        top: 12px;
+        right: 12px;
+      }
+
+      .digital-modal-label {
+        margin-right: 44px;
+      }
+
+      .digital-modal h2 {
+        margin-right: 38px;
+        font-size: 1.55rem;
+      }
+
+      .digital-modal-lead {
+        font-size: 0.79rem;
+      }
+
+      .digital-price {
+        margin-bottom: 30px;
+        padding: 18px;
+      }
+
+      .digital-included {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .digital-modal-footer {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .digital-contact-button {
+        width: 100%;
+        min-height: 48px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .digital-highlight-content,
+      .digital-highlight-arrow,
+      .digital-modal-close,
+      .digital-contact-button {
+        transition: none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://guilhermemolon.com/#person",
+        "name": "Guilherme Molon",
+        "url": "https://guilhermemolon.com/",
+        "jobTitle": "Desenvolvedor de Software",
+        "email": "mailto:contact@guilhermemolon.com",
+        "sameAs": [
+          "https://www.instagram.com/nona_amelia_/"
+        ],
+        "knowsAbout": [
+          "Desenvolvimento de software",
+          "Desenvolvimento web",
+          "Presença digital",
+          "Marketing digital",
+          "SEO"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://guilhermemolon.com/#website",
+        "url": "https://guilhermemolon.com/",
+        "name": "Guilherme Molon",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://guilhermemolon.com/#person"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://guilhermemolon.com/#presenca-digital",
+        "name": "Pacote Presença Digital",
+        "description": "Site profissional personalizado com domínio, hospedagem, SSL, manutenção técnica, SEO e divulgação regional.",
+        "provider": {
+          "@id": "https://guilhermemolon.com/#person"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Serra Gaúcha"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "300.00",
+          "priceCurrency": "BRL",
+          "description": "Pacote mensal de presença digital para empresas e profissionais."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -42,6 +663,41 @@
       <p class="intro">Desenvolvedor de software</p>
     </header>
 
+    <button
+      class="digital-highlight"
+      id="open-digital-modal"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="digital-modal"
+    >
+      <span class="digital-highlight-content">
+
+        <span class="digital-highlight-text">
+          <span class="digital-highlight-label">
+            Vagas limitadas
+          </span>
+
+          <span class="digital-highlight-title">
+            Presença Digital para empresas e profissionais
+          </span>
+
+          <span class="digital-highlight-description">
+            Site profissional, estrutura técnica e divulgação regional
+            por <span class="digital-highlight-price">R$ 300/mês</span>.
+          </span>
+        </span>
+
+        <span class="digital-highlight-action" aria-hidden="true">
+          <span class="digital-highlight-action-text">
+            Conheça
+          </span>
+
+          <span class="digital-highlight-arrow">→</span>
+        </span>
+
+      </span>
+    </button>
+
     <section class="work" aria-labelledby="work-title">
 
       <h2 id="work-title">Projetos selecionados</h2>
@@ -54,6 +710,7 @@
       >
         <span>
           <span class="name">RadarM2</span>
+
           <span class="description">
             Dados e tendências do mercado imobiliário
           </span>
@@ -83,6 +740,7 @@
       >
         <span>
           <span class="name">Raízes da Serra</span>
+
           <span class="description">
             Turismo e cultura da Serra Gaúcha
           </span>
@@ -112,6 +770,7 @@
       >
         <span>
           <span class="name">Meu Aluguel</span>
+
           <span class="description">
             Gestão simples para proprietários de imóveis
           </span>
@@ -141,6 +800,7 @@
       >
         <span>
           <span class="name">Nona Amélia</span>
+
           <span class="description">
             Conteúdo regional e comunidade digital
           </span>
@@ -174,11 +834,136 @@
 
   </main>
 
+  <dialog
+    class="digital-modal"
+    id="digital-modal"
+    aria-labelledby="digital-modal-title"
+  >
+    <div class="digital-modal-inner">
+
+      <button
+        class="digital-modal-close"
+        id="close-digital-modal"
+        type="button"
+        aria-label="Fechar"
+      >
+        ×
+      </button>
+
+      <span class="digital-modal-label">
+        Pacote Presença Digital
+      </span>
+
+      <h2 id="digital-modal-title">
+        Sua empresa apresentada de forma profissional na internet.
+      </h2>
+
+      <p class="digital-modal-lead">
+        Você cuida do seu negócio. Eu cuido do seu site e da estrutura
+        necessária para fortalecer sua presença digital.
+      </p>
+
+      <div class="digital-price" aria-label="Valor de 300 reais por mês">
+        <span class="digital-price-prefix">R$</span>
+        <span class="digital-price-value">300</span>
+        <span class="digital-price-period">/mês</span>
+      </div>
+
+      <section aria-labelledby="digital-included-title">
+        <h3 id="digital-included-title">O pacote inclui</h3>
+
+        <ul class="digital-included">
+          <li>Site profissional personalizado</li>
+          <li>Domínio próprio</li>
+          <li>Hospedagem e certificado SSL</li>
+          <li>Site responsivo</li>
+          <li>Contatos, horários e localização</li>
+          <li>Estrutura técnica preparada para SEO</li>
+          <li>Manutenção técnica</li>
+          <li>Alterações de conteúdo</li>
+          <li>Destaque no Guia de Negócios</li>
+          <li>Presença no portal Raízes da Serra</li>
+          <li>Presença no Mapa da Serra</li>
+          <li>Uma divulgação mensal nas redes Amélia</li>
+        </ul>
+      </section>
+
+      <div class="digital-direct">
+        <strong>Atendimento direto, sem terceirização.</strong>
+        Do desenvolvimento à manutenção, o contato e o acompanhamento
+        são realizados diretamente comigo.
+      </div>
+
+      <section
+        class="digital-options"
+        aria-labelledby="digital-options-title"
+      >
+        <h3 id="digital-options-title">Serviços opcionais</h3>
+
+        <p>
+          <strong>E-mail profissional:</strong>
+          R$ 40/mês por conta
+        </p>
+
+        <p>
+          <strong>Captação aérea por drone:</strong>
+          R$ 250 por sessão
+        </p>
+
+        <p>
+          <strong>Consultoria estratégica:</strong>
+          R$ 500 por sessão de uma hora
+        </p>
+      </section>
+
+      <div class="digital-modal-footer">
+
+        <p class="digital-limited">
+          <strong>Vagas limitadas</strong>
+          Atendimento personalizado para novos projetos.
+        </p>
+
+        <a
+          class="digital-contact-button"
+          href="mailto:contact@guilhermemolon.com?subject=Interesse%20no%20Pacote%20Presen%C3%A7a%20Digital"
+        >
+          Quero conversar
+        </a>
+
+      </div>
+
+    </div>
+  </dialog>
+
+  <script>
+    const digitalModal = document.getElementById("digital-modal");
+    const openDigitalModal = document.getElementById(
+      "open-digital-modal"
+    );
+    const closeDigitalModal = document.getElementById(
+      "close-digital-modal"
+    );
+
+    openDigitalModal.addEventListener("click", () => {
+      digitalModal.showModal();
+    });
+
+    closeDigitalModal.addEventListener("click", () => {
+      digitalModal.close();
+    });
+
+    digitalModal.addEventListener("click", (event) => {
+      if (event.target === digitalModal) {
+        digitalModal.close();
+      }
+    });
+  </script>
+
   <script
     data-goatcounter="https://gfmolon.goatcounter.com/count"
     async
-    src="//gc.zgo.at/count.js">
-  </script>
+    src="//gc.zgo.at/count.js"
+  ></script>
 
 </body>
 </html>
