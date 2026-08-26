@@ -989,6 +989,22 @@
         digitalModal.close();
       }
     });
+
+    function openDigitalModalFromLink() {
+      if (
+        window.location.hash === "#presenca-digital" &&
+        !digitalModal.open
+      ) {
+        digitalModal.showModal();
+      }
+    }
+
+    openDigitalModalFromLink();
+
+    window.addEventListener(
+      "hashchange",
+      openDigitalModalFromLink
+    );
   </script>
 
   <script
