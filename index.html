@@ -104,14 +104,25 @@
      */
 
     .digital-highlight {
+      position: relative;
       width: 100%;
       margin: 42px 0 58px;
+      padding: 0;
+    }
+
+    .digital-highlight[hidden] {
+      display: none;
+    }
+
+    .digital-highlight-trigger {
+      display: block;
+      width: 100%;
       padding: 0;
 
       color: inherit;
       background: transparent;
       border: 0;
-      border-radius: 12px;
+      border-radius: 10px;
 
       font: inherit;
       text-align: left;
@@ -125,17 +136,12 @@
       justify-content: space-between;
       gap: 30px;
 
-      padding: 24px 26px;
+      padding: 20px 58px 20px 22px;
 
       overflow: hidden;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(154, 205, 50, 0.12),
-          rgba(154, 205, 50, 0.025)
-        );
-      border: 1px solid rgba(154, 205, 50, 0.45);
-      border-radius: 12px;
+      background: rgba(244, 247, 251, 0.025);
+      border: 1px solid rgba(244, 247, 251, 0.1);
+      border-radius: 10px;
 
       transition:
         border-color 180ms ease,
@@ -149,24 +155,18 @@
       bottom: 0;
       left: 0;
 
-      width: 3px;
-      background: #9acd32;
+      width: 2px;
+      background: rgba(244, 247, 251, 0.25);
       content: "";
     }
 
-    .digital-highlight:hover .digital-highlight-content {
-      background:
-        linear-gradient(
-          135deg,
-          rgba(154, 205, 50, 0.17),
-          rgba(154, 205, 50, 0.04)
-        );
-      border-color: rgba(154, 205, 50, 0.75);
-      transform: translateY(-2px);
+    .digital-highlight-trigger:hover .digital-highlight-content {
+      background: rgba(244, 247, 251, 0.045);
+      border-color: rgba(244, 247, 251, 0.18);
     }
 
-    .digital-highlight:focus-visible {
-      outline: 2px solid #9acd32;
+    .digital-highlight-trigger:focus-visible {
+      outline: 2px solid rgba(244, 247, 251, 0.6);
       outline-offset: 4px;
     }
 
@@ -178,7 +178,7 @@
       display: block;
       margin-bottom: 9px;
 
-      color: #9acd32;
+      color: rgba(244, 247, 251, 0.46);
       font-size: 0.69rem;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -216,7 +216,7 @@
       align-items: center;
       gap: 9px;
 
-      color: #9acd32;
+      color: rgba(244, 247, 251, 0.58);
       font-size: 0.74rem;
       font-weight: 600;
       white-space: nowrap;
@@ -227,8 +227,43 @@
       transition: transform 180ms ease;
     }
 
-    .digital-highlight:hover .digital-highlight-arrow {
+    .digital-highlight-trigger:hover .digital-highlight-arrow {
       transform: translateX(4px);
+    }
+
+    .digital-highlight-dismiss {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+
+      display: grid;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+
+      color: rgba(244, 247, 251, 0.38);
+      background: transparent;
+      border: 0;
+      border-radius: 50%;
+
+      font: inherit;
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      place-items: center;
+
+      transition: color 180ms ease, background-color 180ms ease;
+    }
+
+    .digital-highlight-dismiss:hover {
+      color: rgba(244, 247, 251, 0.78);
+      background: rgba(244, 247, 251, 0.06);
+    }
+
+    .digital-highlight-dismiss:focus-visible {
+      outline: 2px solid rgba(244, 247, 251, 0.6);
+      outline-offset: 2px;
     }
 
     /*
@@ -538,7 +573,7 @@
       .digital-highlight-content {
         align-items: flex-start;
         gap: 18px;
-        padding: 20px 18px 20px 21px;
+        padding: 18px 50px 18px 19px;
       }
 
       .digital-highlight-title {
@@ -555,6 +590,11 @@
 
       .digital-highlight-action {
         padding-top: 23px;
+      }
+
+      .digital-highlight-dismiss {
+        top: 9px;
+        right: 9px;
       }
 
       .digital-modal {
@@ -610,6 +650,7 @@
     @media (prefers-reduced-motion: reduce) {
       .digital-highlight-content,
       .digital-highlight-arrow,
+      .digital-highlight-dismiss,
       .digital-modal-close,
       .digital-contact-button {
         transition: none;
@@ -690,40 +731,55 @@
       <p class="intro">Desenvolvedor de software</p>
     </header>
 
-    <button
+    <div
       class="digital-highlight"
-      id="open-digital-modal"
-      type="button"
-      aria-haspopup="dialog"
-      aria-controls="digital-modal"
+      id="digital-highlight"
     >
-      <span class="digital-highlight-content">
+      <button
+        class="digital-highlight-trigger"
+        id="open-digital-modal"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="digital-modal"
+      >
+        <span class="digital-highlight-content">
 
-        <span class="digital-highlight-text">
-          <span class="digital-highlight-label">
-            Vagas limitadas
+          <span class="digital-highlight-text">
+            <span class="digital-highlight-label">
+              Vagas limitadas
+            </span>
+
+            <span class="digital-highlight-title">
+              Sua presença digital
+            </span>
+
+            <span class="digital-highlight-description">
+              Site, manutenção e visibilidade regional por
+              <span class="digital-highlight-price">R$ 300/mês</span>.
+            </span>
           </span>
 
-        <span class="digital-highlight-title">
-        Sua presença digital
-        </span>
+          <span class="digital-highlight-action" aria-hidden="true">
+            <span class="digital-highlight-action-text">
+              Conheça
+            </span>
 
-          <span class="digital-highlight-description">
-            Site, manutenção e visibilidade regional por
-            <span class="digital-highlight-price">R$ 300/mês</span>.
-          </span>
-        </span>
-
-        <span class="digital-highlight-action" aria-hidden="true">
-          <span class="digital-highlight-action-text">
-            Conheça
+            <span class="digital-highlight-arrow">→</span>
           </span>
 
-          <span class="digital-highlight-arrow">→</span>
         </span>
+      </button>
 
-      </span>
-    </button>
+      <button
+        class="digital-highlight-dismiss"
+        id="dismiss-digital-highlight"
+        type="button"
+        aria-label="Ocultar esta divulgação"
+        title="Ocultar"
+      >
+        ×
+      </button>
+    </div>
 
     <section class="work" aria-labelledby="work-title">
 
@@ -968,6 +1024,11 @@
   </dialog>
 
   <script>
+    const digitalHighlightStorageKey =
+      "guilherme-molon-digital-highlight-dismissed";
+    const digitalHighlight = document.getElementById(
+      "digital-highlight"
+    );
     const digitalModal = document.getElementById("digital-modal");
     const openDigitalModal = document.getElementById(
       "open-digital-modal"
@@ -975,6 +1036,27 @@
     const closeDigitalModal = document.getElementById(
       "close-digital-modal"
     );
+    const dismissDigitalHighlight = document.getElementById(
+      "dismiss-digital-highlight"
+    );
+
+    try {
+      if (localStorage.getItem(digitalHighlightStorageKey) === "true") {
+        digitalHighlight.hidden = true;
+      }
+    } catch (error) {
+      // O card continua visível se o navegador bloquear o localStorage.
+    }
+
+    dismissDigitalHighlight.addEventListener("click", () => {
+      digitalHighlight.hidden = true;
+
+      try {
+        localStorage.setItem(digitalHighlightStorageKey, "true");
+      } catch (error) {
+        // O fechamento ainda funciona durante a visita atual.
+      }
+    });
 
     openDigitalModal.addEventListener("click", () => {
       digitalModal.showModal();
