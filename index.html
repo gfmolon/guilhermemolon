@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 
@@ -106,8 +107,7 @@
     .digital-highlight {
       position: relative;
       width: 100%;
-      margin: 42px 0 58px;
-      padding: 0;
+      margin: 38px 0 54px;
     }
 
     .digital-highlight[hidden] {
@@ -122,7 +122,7 @@
       color: inherit;
       background: transparent;
       border: 0;
-      border-radius: 10px;
+      border-radius: 8px;
 
       font: inherit;
       text-align: left;
@@ -134,14 +134,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
-
-      padding: 20px 58px 20px 22px;
+      gap: 24px;
+      padding: 16px 52px 16px 18px;
 
       overflow: hidden;
-      background: rgba(244, 247, 251, 0.025);
-      border: 1px solid rgba(244, 247, 251, 0.1);
-      border-radius: 10px;
+      background: rgba(244, 247, 251, 0.018);
+      border: 1px solid rgba(244, 247, 251, 0.08);
+      border-radius: 8px;
 
       transition:
         border-color 180ms ease,
@@ -149,20 +148,9 @@
         transform 180ms ease;
     }
 
-    .digital-highlight-content::before {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-
-      width: 2px;
-      background: rgba(244, 247, 251, 0.25);
-      content: "";
-    }
-
     .digital-highlight-trigger:hover .digital-highlight-content {
-      background: rgba(244, 247, 251, 0.045);
-      border-color: rgba(244, 247, 251, 0.18);
+      background: rgba(244, 247, 251, 0.032);
+      border-color: rgba(244, 247, 251, 0.14);
     }
 
     .digital-highlight-trigger:focus-visible {
@@ -176,21 +164,21 @@
 
     .digital-highlight-label {
       display: block;
-      margin-bottom: 9px;
+      margin-bottom: 6px;
 
-      color: rgba(244, 247, 251, 0.46);
-      font-size: 0.69rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+      color: rgba(244, 247, 251, 0.4);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
     }
 
     .digital-highlight-title {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
 
       color: #f4f7fb;
-      font-size: 0.96rem;
+      font-size: 0.9rem;
       font-weight: 600;
       line-height: 1.5;
     }
@@ -198,8 +186,8 @@
     .digital-highlight-description {
       display: block;
 
-      color: rgba(244, 247, 251, 0.6);
-      font-size: 0.78rem;
+      color: rgba(244, 247, 251, 0.54);
+      font-size: 0.73rem;
       font-weight: 400;
       line-height: 1.65;
     }
@@ -214,11 +202,11 @@
       display: flex;
       flex: 0 0 auto;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
 
       color: rgba(244, 247, 251, 0.58);
-      font-size: 0.74rem;
-      font-weight: 600;
+      font-size: 0.7rem;
+      font-weight: 500;
       white-space: nowrap;
     }
 
@@ -238,8 +226,8 @@
       z-index: 2;
 
       display: grid;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       padding: 0;
 
       color: rgba(244, 247, 251, 0.38);
@@ -248,7 +236,7 @@
       border-radius: 50%;
 
       font: inherit;
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1;
       cursor: pointer;
       place-items: center;
@@ -271,18 +259,18 @@
      */
 
     .digital-modal {
-      width: min(720px, calc(100% - 32px));
-      max-height: min(86vh, 860px);
+      width: min(620px, calc(100% - 32px));
+      max-height: min(88vh, 760px);
       margin: auto;
       padding: 0;
 
       color: #f4f7fb;
-      background: #101211;
-      border: 1px solid rgba(154, 205, 50, 0.38);
-      border-radius: 14px;
+      background: #111211;
+      border: 1px solid rgba(244, 247, 251, 0.13);
+      border-radius: 10px;
 
       overflow: hidden;
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.72);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.68);
     }
 
     .digital-modal::backdrop {
@@ -293,12 +281,12 @@
 
     .digital-modal-inner {
       position: relative;
-      max-height: min(86vh, 860px);
-      padding: 40px;
+      max-height: min(88vh, 760px);
+      padding: 34px 36px 32px;
 
       overflow-y: auto;
       overscroll-behavior: contain;
-      scrollbar-color: rgba(154, 205, 50, 0.45) transparent;
+      scrollbar-color: rgba(244, 247, 251, 0.2) transparent;
       scrollbar-width: thin;
     }
 
@@ -308,13 +296,13 @@
       right: 17px;
 
       display: grid;
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       padding: 0;
 
       color: rgba(244, 247, 251, 0.55);
-      background: rgba(244, 247, 251, 0.045);
-      border: 1px solid rgba(244, 247, 251, 0.1);
+      background: transparent;
+      border: 1px solid rgba(244, 247, 251, 0.08);
       border-radius: 50%;
 
       font: inherit;
@@ -330,69 +318,64 @@
     }
 
     .digital-modal-close:hover {
-      color: #9acd32;
-      background: rgba(154, 205, 50, 0.08);
-      border-color: rgba(154, 205, 50, 0.4);
+      color: #f4f7fb;
+      background: rgba(244, 247, 251, 0.05);
+      border-color: rgba(244, 247, 251, 0.18);
     }
 
     .digital-modal-close:focus-visible {
-      outline: 2px solid #9acd32;
+      outline: 2px solid rgba(244, 247, 251, 0.65);
       outline-offset: 3px;
     }
 
     .digital-modal-label {
       display: block;
-      margin: 0 52px 14px 0;
+      margin: 0 48px 11px 0;
 
-      color: #9acd32;
-      font-size: 0.69rem;
-      font-weight: 700;
-      letter-spacing: 0.11em;
+      color: rgba(244, 247, 251, 0.45);
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
     .digital-modal h2 {
-      max-width: 590px;
-      margin: 0 52px 16px 0;
+      max-width: 500px;
+      margin: 0 48px 11px 0;
 
       color: #f4f7fb;
-      font-size: clamp(1.55rem, 4vw, 2.35rem);
+      font-size: clamp(1.35rem, 4vw, 1.9rem);
       font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.04em;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
     }
 
     .digital-modal-lead {
       max-width: 620px;
-      margin: 0 0 28px;
+      margin: 0 0 24px;
 
       color: rgba(244, 247, 251, 0.64);
-      font-size: 0.86rem;
-      line-height: 1.8;
+      font-size: 0.78rem;
+      line-height: 1.7;
     }
 
     .digital-price {
       display: flex;
       align-items: baseline;
-      gap: 5px;
-
-      margin-bottom: 34px;
-      padding: 20px 22px;
-
-      background: rgba(154, 205, 50, 0.07);
-      border: 1px solid rgba(154, 205, 50, 0.3);
-      border-radius: 10px;
+      gap: 4px;
+      margin-bottom: 8px;
+      padding: 0;
     }
 
     .digital-price-prefix {
       color: rgba(244, 247, 251, 0.66);
-      font-size: 0.88rem;
+      font-size: 0.76rem;
       font-weight: 600;
     }
 
     .digital-price-value {
       color: #9acd32;
-      font-size: clamp(2rem, 7vw, 3rem);
+      font-size: clamp(1.75rem, 6vw, 2.35rem);
       font-weight: 700;
       line-height: 1;
       letter-spacing: -0.06em;
@@ -404,10 +387,10 @@
     }
 
     .digital-no-setup {
-      margin: -20px 0 34px;
+      margin: 0 0 28px;
 
       color: rgba(244, 247, 251, 0.62);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       line-height: 1.6;
     }
 
@@ -418,19 +401,18 @@
     }
 
     .digital-modal h3 {
-      margin: 0 0 16px;
+      margin: 0 0 10px;
 
       color: #f4f7fb;
-      font-size: 0.82rem;
+      font-size: 0.75rem;
       font-weight: 600;
     }
 
     .digital-included {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
-
-      margin: 0 0 36px;
+      gap: 0;
+      margin: 0 0 26px;
       padding: 0;
 
       list-style: none;
@@ -438,62 +420,43 @@
 
     .digital-included li {
       position: relative;
-      padding: 15px 16px 15px 42px;
-
-      color: rgba(244, 247, 251, 0.68);
-      background: rgba(244, 247, 251, 0.025);
-      border: 1px solid rgba(244, 247, 251, 0.09);
-      border-radius: 8px;
-
-      font-size: 0.75rem;
+      padding: 12px 0 12px 24px;
+      color: rgba(244, 247, 251, 0.62);
+      border-bottom: 1px solid rgba(244, 247, 251, 0.08);
+      font-size: 0.71rem;
       line-height: 1.55;
     }
 
     .digital-included li::before {
       position: absolute;
-      top: 15px;
-      left: 16px;
+      top: 12px;
+      left: 0;
 
-      color: #9acd32;
+      color: rgba(154, 205, 50, 0.9);
       font-weight: 700;
       content: "✓";
     }
 
     .digital-included strong {
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
 
       color: #f4f7fb;
-      font-size: 0.79rem;
-      font-weight: 600;
-    }
-
-    .digital-direct {
-      margin: 0 0 30px;
-      padding: 18px 20px;
-
-      color: rgba(244, 247, 251, 0.65);
-      background: rgba(244, 247, 251, 0.025);
-      border-left: 2px solid #9acd32;
-
-      font-size: 0.76rem;
-      line-height: 1.75;
-    }
-
-    .digital-direct strong {
-      color: #f4f7fb;
+      font-size: 0.75rem;
       font-weight: 600;
     }
 
     .digital-options {
-      margin-bottom: 32px;
+      margin-bottom: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(244, 247, 251, 0.08);
     }
 
     .digital-options p {
-      margin: 8px 0;
+      margin: 7px 0;
 
       color: rgba(244, 247, 251, 0.57);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       line-height: 1.6;
     }
 
@@ -506,17 +469,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 22px;
-
-      padding-top: 26px;
-      border-top: 1px solid rgba(244, 247, 251, 0.11);
+      gap: 18px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(244, 247, 251, 0.08);
     }
 
     .digital-limited {
       margin: 0;
 
-      color: rgba(244, 247, 251, 0.56);
-      font-size: 0.7rem;
+      color: rgba(244, 247, 251, 0.5);
+      font-size: 0.66rem;
       line-height: 1.55;
     }
 
@@ -524,8 +486,8 @@
       display: block;
       margin-bottom: 3px;
 
-      color: #9acd32;
-      font-size: 0.72rem;
+      color: rgba(244, 247, 251, 0.78);
+      font-size: 0.68rem;
     }
 
     .digital-contact-button {
@@ -534,12 +496,12 @@
       align-items: center;
       justify-content: center;
 
-      min-height: 44px;
-      padding: 12px 18px;
+      min-height: 42px;
+      padding: 11px 16px;
 
       color: #0a0a0a;
       background: #9acd32;
-      border-radius: 6px;
+      border-radius: 5px;
 
       font-size: 0.74rem;
       font-weight: 700;
@@ -573,15 +535,15 @@
       .digital-highlight-content {
         align-items: flex-start;
         gap: 18px;
-        padding: 18px 50px 18px 19px;
+        padding: 16px 46px 16px 17px;
       }
 
       .digital-highlight-title {
-        font-size: 0.86rem;
+        font-size: 0.82rem;
       }
 
       .digital-highlight-description {
-        font-size: 0.72rem;
+        font-size: 0.69rem;
       }
 
       .digital-highlight-action-text {
@@ -589,7 +551,7 @@
       }
 
       .digital-highlight-action {
-        padding-top: 23px;
+        padding-top: 20px;
       }
 
       .digital-highlight-dismiss {
@@ -600,12 +562,12 @@
       .digital-modal {
         width: calc(100% - 20px);
         max-height: calc(100dvh - 20px);
-        border-radius: 12px;
+        border-radius: 9px;
       }
 
       .digital-modal-inner {
         max-height: calc(100dvh - 20px);
-        padding: 28px 20px 24px;
+        padding: 27px 20px 22px;
       }
 
       .digital-modal-close {
@@ -619,21 +581,16 @@
 
       .digital-modal h2 {
         margin-right: 38px;
-        font-size: 1.55rem;
+        font-size: 1.38rem;
       }
 
       .digital-modal-lead {
-        font-size: 0.79rem;
-      }
-
-      .digital-price {
-        margin-bottom: 30px;
-        padding: 18px;
+        font-size: 0.76rem;
       }
 
       .digital-included {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 0;
       }
 
       .digital-modal-footer {
@@ -746,22 +703,22 @@
 
           <span class="digital-highlight-text">
             <span class="digital-highlight-label">
-              Vagas limitadas
+              Presença digital
             </span>
 
             <span class="digital-highlight-title">
-              Sua presença digital
+              Site profissional para o seu negócio
             </span>
 
             <span class="digital-highlight-description">
-              Site, manutenção e visibilidade regional por
-              <span class="digital-highlight-price">R$ 300/mês</span>.
+              Criação, manutenção e visibilidade regional ·
+              <span class="digital-highlight-price">R$ 300/mês</span>
             </span>
           </span>
 
           <span class="digital-highlight-action" aria-hidden="true">
             <span class="digital-highlight-action-text">
-              Conheça
+              Detalhes
             </span>
 
             <span class="digital-highlight-arrow">→</span>
@@ -934,15 +891,15 @@
       </button>
 
       <span class="digital-modal-label">
-        Pacote Presença Digital
+        Presença digital
       </span>
 
       <h2 id="digital-modal-title">
-        Uma presença profissional completa.
+        Seu site, cuidado por completo.
       </h2>
 
       <p class="digital-modal-lead">
-        Você cuida do seu negócio. Eu cuido da sua presença na internet.
+        Da criação à manutenção, você fala diretamente comigo.
       </p>
 
       <div class="digital-price" aria-label="Valor de 300 reais por mês">
@@ -974,11 +931,6 @@
         </ul>
       </section>
 
-        <div class="digital-direct">
-          <strong>Atendimento direto e personalizado.</strong>
-          Você fala diretamente comigo do início à manutenção.
-        </div>
-
       <section
         class="digital-options"
         aria-labelledby="digital-options-title"
@@ -996,7 +948,7 @@
         </p>
 
         <p>
-          <strong>Consultoria estratégica em presença digital e marketing:</strong>
+          <strong>Consultoria estratégica:</strong>
           R$ 500 por sessão de até 1 hora
         </p>
 
