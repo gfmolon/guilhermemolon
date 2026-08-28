@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 
@@ -107,6 +108,8 @@
       position: relative;
       width: 100%;
       margin: 38px 0 54px;
+      border-top: 1px solid rgba(244, 247, 251, 0.08);
+      border-bottom: 1px solid rgba(244, 247, 251, 0.08);
     }
 
     .digital-highlight[hidden] {
@@ -116,12 +119,11 @@
     .digital-highlight-trigger {
       display: block;
       width: 100%;
-      padding: 0;
+      padding: 22px 0;
 
       color: inherit;
       background: transparent;
       border: 0;
-      border-radius: 8px;
 
       font: inherit;
       text-align: left;
@@ -134,22 +136,14 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 16px 52px 16px 18px;
-
-      overflow: hidden;
-      background: rgba(244, 247, 251, 0.018);
-      border: 1px solid rgba(244, 247, 251, 0.08);
-      border-radius: 8px;
+      padding: 0;
 
       transition:
-        border-color 180ms ease,
-        background-color 180ms ease,
-        transform 180ms ease;
+        opacity 180ms ease;
     }
 
     .digital-highlight-trigger:hover .digital-highlight-content {
-      background: rgba(244, 247, 251, 0.032);
-      border-color: rgba(244, 247, 251, 0.14);
+      opacity: 0.78;
     }
 
     .digital-highlight-trigger:focus-visible {
@@ -161,32 +155,21 @@
       min-width: 0;
     }
 
-    .digital-highlight-label {
-      display: block;
-      margin-bottom: 6px;
-
-      color: rgba(244, 247, 251, 0.4);
-      font-size: 0.62rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
     .digital-highlight-title {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
 
       color: #f4f7fb;
-      font-size: 0.9rem;
-      font-weight: 600;
-      line-height: 1.5;
+      font-size: 0.98rem;
+      font-weight: 500;
+      line-height: 1.45;
     }
 
     .digital-highlight-description {
       display: block;
 
       color: rgba(244, 247, 251, 0.54);
-      font-size: 0.73rem;
+      font-size: 0.72rem;
       font-weight: 400;
       line-height: 1.65;
     }
@@ -417,13 +400,13 @@
       }
 
       .digital-highlight-content {
-        align-items: flex-start;
-        gap: 18px;
-        padding: 16px 46px 16px 17px;
+        align-items: center;
+        gap: 16px;
+        padding: 0;
       }
 
       .digital-highlight-title {
-        font-size: 0.82rem;
+        font-size: 0.86rem;
       }
 
       .digital-highlight-description {
@@ -435,7 +418,7 @@
       }
 
       .digital-highlight-action {
-        padding-top: 20px;
+        padding-top: 0;
       }
 
       .digital-modal {
@@ -695,22 +678,22 @@
         <span class="digital-highlight-content">
 
           <span class="digital-highlight-text">
-            <span class="digital-highlight-label">
-              Presença digital para empresas
-            </span>
-
             <span class="digital-highlight-title">
               Sites profissionais e estrutura digital
             </span>
 
             <span class="digital-highlight-description">
-              Criação, publicação e manutenção em um único serviço.
+              Criação, publicação e manutenção.
             </span>
           </span>
 
           <span class="digital-highlight-action" aria-hidden="true">
             <span class="digital-highlight-action-text">
               Conheça o serviço
+            </span>
+
+            <span class="digital-highlight-arrow">
+              →
             </span>
           </span>
 
