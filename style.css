@@ -238,3 +238,9 @@ picture.brand-mark img {
         margin-bottom: 24px;
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        margin-bottom: 56px;
+    }
+}
