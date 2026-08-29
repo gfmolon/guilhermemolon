@@ -214,3 +214,27 @@ a:focus-visible {
         margin-bottom: 24px;
     }
 }
+
+picture.brand-mark {
+    display: block !important;
+    width: clamp(112px, 17vw, 145px);
+    max-width: 145px;
+    margin: 0 0 28px;
+    line-height: 0;
+}
+
+picture.brand-mark img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.88;
+}
+
+@media (max-width: 600px) {
+    picture.brand-mark {
+        width: 112px;
+        max-width: 112px;
+        margin-bottom: 24px;
+    }
+}
