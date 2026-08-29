@@ -100,360 +100,48 @@
   <link rel="stylesheet" href="/style.css">
 
   <style>
-    /*
-     * Destaque do Pacote Presença Digital
-     */
-
-    .digital-highlight {
-      position: relative;
-      width: 100%;
-      margin: 38px 0 54px;
-      border-top: 1px solid rgba(244, 247, 251, 0.08);
-      border-bottom: 1px solid rgba(244, 247, 251, 0.08);
+    .service {
+      margin-top: clamp(72px, 14vw, 120px);
     }
 
-    .digital-highlight[hidden] {
-      display: none;
-    }
-
-    .digital-highlight-trigger {
-      display: block;
-      width: 100%;
-      padding: 22px 0;
-
-      color: inherit;
-      background: transparent;
-      border: 0;
-
-      font: inherit;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .digital-highlight-content {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .service-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
       gap: 24px;
-      padding: 0;
-
-      transition:
-        opacity 180ms ease;
-    }
-
-    .digital-highlight-trigger:hover .digital-highlight-content {
-      opacity: 0.78;
-    }
-
-    .digital-highlight-trigger:focus-visible {
-      outline: 2px solid rgba(244, 247, 251, 0.6);
-      outline-offset: 4px;
-    }
-
-    .digital-highlight-text {
-      min-width: 0;
-    }
-
-    .digital-highlight-title {
-      display: block;
-      margin-bottom: 5px;
-
-      color: #f4f7fb;
-      font-size: 0.98rem;
-      font-weight: 500;
-      line-height: 1.45;
-    }
-
-    .digital-highlight-description {
-      display: block;
-
-      color: rgba(244, 247, 251, 0.54);
-      font-size: 0.72rem;
-      font-weight: 400;
-      line-height: 1.65;
-    }
-
-    .digital-highlight-price {
-      color: #f4f7fb;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .digital-highlight-action {
-      display: flex;
-      flex: 0 0 auto;
       align-items: center;
-      gap: 8px;
-
-      color: rgba(244, 247, 251, 0.58);
-      font-size: 0.7rem;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .digital-highlight-arrow {
-      font-size: 1rem;
-      transition: transform 180ms ease;
-    }
-
-    .digital-highlight-trigger:hover .digital-highlight-arrow {
-      transform: translateX(4px);
-    }
-
-    /*
-     * Lightbox
-     */
-
-    .digital-modal {
-      width: min(520px, calc(100% - 32px));
-      max-height: min(88vh, 680px);
-      margin: auto;
-      padding: 0;
-
-      color: #f4f7fb;
-      background: #101110;
-      border: 1px solid rgba(244, 247, 251, 0.11);
-      border-radius: 8px;
-
-      overflow: hidden;
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.72);
-    }
-
-    .digital-modal::backdrop {
-      background: rgba(0, 0, 0, 0.84);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-    }
-
-    .digital-modal-inner {
-      position: relative;
-      max-height: min(88vh, 680px);
-      padding: 40px;
-
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      scrollbar-color: rgba(244, 247, 251, 0.18) transparent;
-      scrollbar-width: thin;
-    }
-
-    .digital-modal-close {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-
-      display: grid;
-      width: 28px;
-      height: 28px;
-      padding: 0;
-
-      color: rgba(244, 247, 251, 0.52);
-      background: transparent;
-      border: 0;
-
-      font: inherit;
-      font-size: 1.15rem;
-      line-height: 1;
-      cursor: pointer;
-      place-items: center;
-
-      transition: color 180ms ease;
-    }
-
-    .digital-modal-close:hover {
-      color: #f4f7fb;
-    }
-
-    .digital-modal-close:focus-visible {
-      outline: 1px solid rgba(244, 247, 251, 0.65);
-      outline-offset: 3px;
-    }
-
-    .digital-modal h2 {
-      max-width: 440px;
-      margin: 0 46px 12px 0;
-
-      color: #f4f7fb;
-      font-size: clamp(1.5rem, 4vw, 1.85rem);
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-    }
-
-    .digital-modal-title-line {
-      display: block;
-      white-space: nowrap;
-    }
-
-    .digital-modal-lead {
-      max-width: 440px;
-      margin: 0 0 30px;
-
-      color: rgba(244, 247, 251, 0.62);
-      font-size: 0.86rem;
-      line-height: 1.7;
-    }
-
-    .digital-offer {
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 28px;
-      padding: 0;
-    }
-
-    .digital-price {
-      margin: 0;
-      color: rgba(244, 247, 251, 0.62);
-      font-size: 0.86rem;
-      font-weight: 500;
-      line-height: 1.6;
-      white-space: nowrap;
-    }
-
-    .digital-price strong {
-      color: #f4f7fb;
-      font-weight: 600;
-    }
-
-    .digital-included {
-      display: grid;
-      gap: 12px;
-      margin: 0 0 30px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .digital-included li {
-      position: relative;
-      padding: 0 0 0 18px;
-      color: rgba(244, 247, 251, 0.82);
-      font-size: 0.84rem;
-      line-height: 1.6;
-    }
-
-    .digital-included li::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: rgba(244, 247, 251, 0.46);
-      content: "—";
-    }
-
-    .digital-included strong {
-      color: inherit;
-      font-size: inherit;
-      font-weight: 500;
-    }
-
-    .digital-modal-footer {
-      display: block;
-    }
-
-    .digital-contact-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 100%;
-      min-height: 50px;
-      padding: 13px 18px;
-
-      color: #101110;
-      background: #f4f7fb;
-      border: 1px solid #f4f7fb;
-      border-radius: 5px;
-
-      font-size: 0.82rem;
-      font-weight: 600;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       text-decoration: none;
-
-      transition:
-        background-color 180ms ease,
-        border-color 180ms ease;
     }
 
-    .digital-contact-button:hover {
-      color: #101110;
-      background: #ffffff;
-      border-color: #ffffff;
+    .service-title {
+      display: block;
+      font-size: clamp(17px, 2.6vw, 20px);
     }
 
-    .digital-contact-button:focus-visible {
-      outline: 1px solid #f4f7fb;
-      outline-offset: 3px;
+    .service-description {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    /*
-     * Celulares
-     */
-
-    @media (max-width: 640px) {
-      .digital-highlight {
-        margin: 32px 0 48px;
-      }
-
-      .digital-highlight-content {
-        align-items: center;
-        gap: 16px;
-        padding: 0;
-      }
-
-      .digital-highlight-title {
-        font-size: 0.86rem;
-      }
-
-      .digital-highlight-description {
-        font-size: 0.69rem;
-      }
-
-      .digital-highlight-action-text {
-        display: none;
-      }
-
-      .digital-highlight-action {
-        padding-top: 0;
-      }
-
-      .digital-modal {
-        width: calc(100% - 20px);
-        max-height: calc(100dvh - 20px);
-        border-radius: 7px;
-      }
-
-      .digital-modal-inner {
-        max-height: calc(100dvh - 20px);
-        padding: 34px 24px 24px;
-      }
-
-      .digital-modal-close {
-        top: 12px;
-        right: 12px;
-      }
-
-      .digital-modal h2 {
-        margin-right: 38px;
-        font-size: 1.2rem;
-      }
-
-      .digital-modal-lead {
-        font-size: 0.82rem;
-      }
-
-      .digital-offer {
-        margin-bottom: 26px;
-      }
-
-      .digital-contact-button {
-        min-height: 48px;
-      }
+    .service-link:hover .service-title,
+    .service-link:focus-visible .service-title,
+    .service-link:hover .arrow,
+    .service-link:focus-visible .arrow {
+      color: var(--accent);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .digital-highlight-content,
-      .digital-highlight-arrow,
-      .digital-modal-close,
-      .digital-contact-button {
-        transition: none;
+    .service-link:hover .arrow,
+    .service-link:focus-visible .arrow {
+      transform: translate(2px, -2px);
+    }
+
+    @media (max-width: 480px) {
+      .service-link {
+        padding: 17px 0;
       }
     }
   </style>
@@ -674,43 +362,41 @@
 
     </section>
 
-    <div
-      class="digital-highlight"
-      id="digital-highlight"
-    >
-      <button
-        class="digital-highlight-trigger"
-        id="open-digital-modal"
-        type="button"
-        aria-haspopup="dialog"
-        aria-controls="digital-modal"
+    <section class="service" aria-labelledby="service-title">
+      <h2 id="service-title">Serviços</h2>
+
+      <a
+        class="service-link"
+        href="https://wa.me/5554992434004?text=Ol%C3%A1%2C%20Guilherme!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20um%20site%20profissional."
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <span class="digital-highlight-content">
-
-          <span class="digital-highlight-text">
-            <span class="digital-highlight-title">
-              Sites profissionais e estrutura digital
-            </span>
-
-            <span class="digital-highlight-description">
-              Criação, publicação e manutenção.
-            </span>
+        <span>
+          <span class="service-title">
+            Sites profissionais para empresas
           </span>
 
-          <span class="digital-highlight-action" aria-hidden="true">
-            <span class="digital-highlight-action-text">
-              Conheça o serviço
-            </span>
-
-            <span class="digital-highlight-arrow">
-              →
-            </span>
+          <span class="service-description">
+            Criação, hospedagem e manutenção.
           </span>
-
         </span>
-      </button>
 
-    </div>
+        <svg
+          class="arrow"
+          aria-hidden="true"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M4 14 14 4M6 4h8v8"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </section>
 
     <footer class="contact">
       <p>Vamos conversar?</p>
@@ -721,106 +407,6 @@
     </footer>
 
   </main>
-
-  <dialog
-    class="digital-modal"
-    id="digital-modal"
-    aria-labelledby="digital-modal-title"
-  >
-    <div class="digital-modal-inner">
-
-      <button
-        class="digital-modal-close"
-        id="close-digital-modal"
-        type="button"
-        aria-label="Fechar"
-      >
-        ×
-      </button>
-
-      <h2 id="digital-modal-title">
-        <span class="digital-modal-title-line">Seu negócio bem</span>
-        <span class="digital-modal-title-line">apresentado na internet</span>
-      </h2>
-
-      <p class="digital-modal-lead">
-        Site profissional, manutenção e presença regional em um único plano.
-      </p>
-
-      <div class="digital-offer">
-        <p class="digital-price">
-          Planos a partir de <strong>R$ 300/mês</strong>
-        </p>
-      </div>
-
-      <section aria-label="O que está incluído">
-        <ul class="digital-included">
-          <li>
-            <strong>Site profissional completo</strong>
-          </li>
-          <li>
-            <strong>Domínio, hospedagem e manutenção</strong>
-          </li>
-          <li>
-            <strong>Presença no portal Raízes da Serra e rede Amélia</strong>
-          </li>
-        </ul>
-      </section>
-
-      <div class="digital-modal-footer">
-
-        <a
-          class="digital-contact-button"
-          href="https://wa.me/5554992434004?text=Ol%C3%A1%2C%20Guilherme!%20Vi%20o%20Pacote%20Presen%C3%A7a%20Digital%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conversar pelo WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-  </dialog>
-
-  <script>
-    const digitalModal = document.getElementById("digital-modal");
-    const openDigitalModal = document.getElementById(
-      "open-digital-modal"
-    );
-    const closeDigitalModal = document.getElementById(
-      "close-digital-modal"
-    );
-    openDigitalModal.addEventListener("click", () => {
-      digitalModal.showModal();
-    });
-
-    closeDigitalModal.addEventListener("click", () => {
-      digitalModal.close();
-    });
-
-    digitalModal.addEventListener("click", (event) => {
-      if (event.target === digitalModal) {
-        digitalModal.close();
-      }
-    });
-
-    function openDigitalModalFromLink() {
-      if (
-        window.location.hash === "#presenca-digital" &&
-        !digitalModal.open
-      ) {
-        digitalModal.showModal();
-      }
-    }
-
-    openDigitalModalFromLink();
-
-    window.addEventListener(
-      "hashchange",
-      openDigitalModalFromLink
-    );
-  </script>
 
   <script
     data-goatcounter="https://gfmolon.goatcounter.com/count"
