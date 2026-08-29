@@ -246,3 +246,12 @@ picture.brand-mark img {
         margin-bottom: 56px;
     }
 }
+
+picture.brand-mark img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(1) brightness(2);
+    opacity: 0.72;
+}
