@@ -190,23 +190,28 @@ a:focus-visible {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
 .brand-mark {
     display: block;
-    width: clamp(135px, 21.6vw, 180px);
-    margin: 0 0 30px;
+    width: clamp(120px, 18vw, 155px);
+    margin: 0 0 28px;
 }
 
 .brand-mark img {
     display: block;
     width: 100%;
     height: auto;
-    filter: grayscale(1) brightness(2);
-    opacity: 0.58;
+    opacity: 0.88;
 }
 
 @media (max-width: 600px) {
     .brand-mark {
-        width: 135px;
+        width: 120px;
         margin-bottom: 24px;
     }
 }
