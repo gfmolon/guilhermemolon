@@ -29,6 +29,53 @@
   >
 
   <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .service {
+      margin-top: clamp(72px, 14vw, 120px);
+    }
+
+    .service-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+    }
+
+    .service-title {
+      display: block;
+      font-size: clamp(17px, 2.6vw, 20px);
+    }
+
+    .service-description {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .service-link:hover .service-title,
+    .service-link:focus-visible .service-title,
+    .service-link:hover .arrow,
+    .service-link:focus-visible .arrow {
+      color: var(--accent);
+    }
+
+    .service-link:hover .arrow,
+    .service-link:focus-visible .arrow {
+      transform: translate(2px, -2px);
+    }
+
+    @media (max-width: 480px) {
+      .service-link {
+        padding: 17px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
