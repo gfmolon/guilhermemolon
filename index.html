@@ -302,29 +302,17 @@
     }
 
     .digital-price {
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
       margin: 0;
-    }
-
-    .digital-price-prefix {
       color: rgba(244, 247, 251, 0.62);
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 500;
+      line-height: 1.6;
+      white-space: nowrap;
     }
 
-    .digital-price-value {
+    .digital-price strong {
       color: #f4f7fb;
-      font-size: clamp(2rem, 6vw, 2.55rem);
       font-weight: 600;
-      line-height: 1;
-      letter-spacing: -0.06em;
-    }
-
-    .digital-price-period {
-      color: rgba(244, 247, 251, 0.52);
-      font-size: 0.82rem;
     }
 
     .digital-included {
@@ -760,11 +748,9 @@
       </p>
 
       <div class="digital-offer">
-        <div class="digital-price" aria-label="Planos a partir de 300 reais por mês">
-          <span class="digital-price-prefix">A partir de R$</span>
-          <span class="digital-price-value">300,00</span>
-          <span class="digital-price-period">/mês</span>
-        </div>
+        <p class="digital-price">
+          Planos a partir de <strong>R$ 300/mês</strong>
+        </p>
       </div>
 
       <section aria-label="O que está incluído">
