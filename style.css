@@ -198,12 +198,6 @@ a:focus-visible {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
-}
-
 .brand-mark {
     width: clamp(112px, 17vw, 145px);
     margin: 0 0 28px;
