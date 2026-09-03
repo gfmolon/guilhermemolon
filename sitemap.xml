@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
 
   <url>
     <loc>https://guilhermemolon.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guilhermemolon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://guilhermemolon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guilhermemolon.com/" />
   </url>
 
   <url>
     <loc>https://guilhermemolon.com/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guilhermemolon.com/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://guilhermemolon.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guilhermemolon.com/sobre/" />
   </url>
 
   <url>
     <loc>https://guilhermemolon.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guilhermemolon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://guilhermemolon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guilhermemolon.com/" />
   </url>
 
   <url>
     <loc>https://guilhermemolon.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://guilhermemolon.com/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://guilhermemolon.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guilhermemolon.com/sobre/" />
   </url>
 
 </urlset>
